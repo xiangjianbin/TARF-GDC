@@ -1,0 +1,11 @@
+{
+  "filename": "Manuscript_zh_传统对照文字精简_20261003.md",
+  "sha256": "8e9e8eb8f9d2538c19f6ea99e303d008d22edc9994c1147e16f9f56930467f4d",
+  "classical_beta": {
+    "L2": 3000.0,
+    "IRLS": 0.3
+  },
+  "excluded": "IRLS beta=0.5477225575051661; 41x41 field refinements; legacy Full",
+  "initial_audit_sha256": "ce72c8a80ae4bdd762fba99f2afe2f50c90e9cca84ea5152a8d678e1b03fe04d",
+  "final_recheck": "verification/manuscript_recheck.json"
+}

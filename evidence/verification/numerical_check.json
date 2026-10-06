@@ -1,0 +1,770 @@
+{
+  "dataset": {
+    "files_checked": 170,
+    "hash_errors": [],
+    "overlaps": {
+      "train/test_locked": {
+        "pair_ids": 0,
+        "sample_ids": 0
+      },
+      "train/validation_iid": {
+        "pair_ids": 0,
+        "sample_ids": 0
+      },
+      "validation_iid/test_locked": {
+        "pair_ids": 0,
+        "sample_ids": 0
+      }
+    },
+    "passed": true,
+    "split_sizes": {
+      "test_locked": {
+        "pairs": 2855,
+        "samples": 10710
+      },
+      "train": {
+        "pairs": 6500,
+        "samples": 25000
+      },
+      "validation_iid": {
+        "pairs": 650,
+        "samples": 2500
+      }
+    }
+  },
+  "elapsed_seconds": 99.09330129623413,
+  "full_retraining_executed": false,
+  "passed": true,
+  "predictions": {
+    "dtype": "bf16",
+    "models": [
+      {
+        "max_absolute_errors": {
+          "density_nrmse": 0.0,
+          "density_sae": 0.0,
+          "foreground_nrmse": 0.0,
+          "physics_nrms": 0.0
+        },
+        "model": "0001_s1107",
+        "passed": true
+      },
+      {
+        "max_absolute_errors": {
+          "density_nrmse": 0.0,
+          "density_sae": 0.0,
+          "foreground_nrmse": 0.0,
+          "physics_nrms": 0.0
+        },
+        "model": "0001_s1108",
+        "passed": true
+      },
+      {
+        "max_absolute_errors": {
+          "density_nrmse": 0.0,
+          "density_sae": 0.0,
+          "foreground_nrmse": 0.0,
+          "physics_nrms": 0.0
+        },
+        "model": "0001_s1109",
+        "passed": true
+      },
+      {
+        "max_absolute_errors": {
+          "density_nrmse": 0.0,
+          "density_sae": 0.0,
+          "foreground_nrmse": 0.0,
+          "physics_nrms": 0.0
+        },
+        "model": "1001_s1107",
+        "passed": true
+      },
+      {
+        "max_absolute_errors": {
+          "density_nrmse": 0.0,
+          "density_sae": 0.0,
+          "foreground_nrmse": 0.0,
+          "physics_nrms": 0.0
+        },
+        "model": "1001_s1108",
+        "passed": true
+      },
+      {
+        "max_absolute_errors": {
+          "density_nrmse": 0.0,
+          "density_sae": 0.0,
+          "foreground_nrmse": 0.0,
+          "physics_nrms": 0.0
+        },
+        "model": "1001_s1109",
+        "passed": true
+      },
+      {
+        "max_absolute_errors": {
+          "density_nrmse": 0.0,
+          "density_sae": 0.0,
+          "foreground_nrmse": 0.0,
+          "physics_nrms": 0.0
+        },
+        "model": "0101_s1107",
+        "passed": true
+      },
+      {
+        "max_absolute_errors": {
+          "density_nrmse": 0.0,
+          "density_sae": 0.0,
+          "foreground_nrmse": 0.0,
+          "physics_nrms": 0.0
+        },
+        "model": "0101_s1108",
+        "passed": true
+      },
+      {
+        "max_absolute_errors": {
+          "density_nrmse": 0.0,
+          "density_sae": 0.0,
+          "foreground_nrmse": 0.0,
+          "physics_nrms": 0.0
+        },
+        "model": "0101_s1109",
+        "passed": true
+      },
+      {
+        "max_absolute_errors": {
+          "density_nrmse": 0.0,
+          "density_sae": 0.0,
+          "foreground_nrmse": 0.0,
+          "physics_nrms": 0.0
+        },
+        "model": "1101_s1107",
+        "passed": true
+      },
+      {
+        "max_absolute_errors": {
+          "density_nrmse": 0.0,
+          "density_sae": 0.0,
+          "foreground_nrmse": 0.0,
+          "physics_nrms": 0.0
+        },
+        "model": "1101_s1108",
+        "passed": true
+      },
+      {
+        "max_absolute_errors": {
+          "density_nrmse": 0.0,
+          "density_sae": 0.0,
+          "foreground_nrmse": 0.0,
+          "physics_nrms": 0.0
+        },
+        "model": "1101_s1109",
+        "passed": true
+      },
+      {
+        "max_absolute_errors": {
+          "density_nrmse": 0.0,
+          "density_sae": 0.0,
+          "foreground_nrmse": 0.0,
+          "physics_nrms": 0.0
+        },
+        "model": "0001C_s1107",
+        "passed": true
+      },
+      {
+        "max_absolute_errors": {
+          "density_nrmse": 0.0,
+          "density_sae": 0.0,
+          "foreground_nrmse": 0.0,
+          "physics_nrms": 0.0
+        },
+        "model": "0001C_s1108",
+        "passed": true
+      },
+      {
+        "max_absolute_errors": {
+          "density_nrmse": 0.0,
+          "density_sae": 0.0,
+          "foreground_nrmse": 0.0,
+          "physics_nrms": 0.0
+        },
+        "model": "0001C_s1109",
+        "passed": true
+      },
+      {
+        "max_absolute_errors": {
+          "density_nrmse": 0.0,
+          "density_sae": 0.0,
+          "foreground_nrmse": 0.0,
+          "physics_nrms": 0.0
+        },
+        "model": "1001C_s1107",
+        "passed": true
+      },
+      {
+        "max_absolute_errors": {
+          "density_nrmse": 0.0,
+          "density_sae": 0.0,
+          "foreground_nrmse": 0.0,
+          "physics_nrms": 0.0
+        },
+        "model": "1001C_s1108",
+        "passed": true
+      },
+      {
+        "max_absolute_errors": {
+          "density_nrmse": 0.0,
+          "density_sae": 0.0,
+          "foreground_nrmse": 0.0,
+          "physics_nrms": 0.0
+        },
+        "model": "1001C_s1109",
+        "passed": true
+      },
+      {
+        "max_absolute_errors": {
+          "density_nrmse": 0.0,
+          "density_sae": 0.0,
+          "foreground_nrmse": 0.0,
+          "physics_nrms": 0.0
+        },
+        "model": "T0P_s1107",
+        "passed": true
+      },
+      {
+        "max_absolute_errors": {
+          "density_nrmse": 0.0,
+          "density_sae": 0.0,
+          "foreground_nrmse": 0.0,
+          "physics_nrms": 0.0
+        },
+        "model": "T0P_s1108",
+        "passed": true
+      },
+      {
+        "max_absolute_errors": {
+          "density_nrmse": 0.0,
+          "density_sae": 0.0,
+          "foreground_nrmse": 0.0,
+          "physics_nrms": 0.0
+        },
+        "model": "T0P_s1109",
+        "passed": true
+      },
+      {
+        "max_absolute_errors": {
+          "density_nrmse": 0.0,
+          "density_sae": 0.0,
+          "foreground_nrmse": 0.0,
+          "physics_nrms": 0.0
+        },
+        "model": "B0P_s1107",
+        "passed": true
+      },
+      {
+        "max_absolute_errors": {
+          "density_nrmse": 0.0,
+          "density_sae": 0.0,
+          "foreground_nrmse": 0.0,
+          "physics_nrms": 0.0
+        },
+        "model": "B0P_s1108",
+        "passed": true
+      },
+      {
+        "max_absolute_errors": {
+          "density_nrmse": 0.0,
+          "density_sae": 0.0,
+          "foreground_nrmse": 0.0,
+          "physics_nrms": 0.0
+        },
+        "model": "B0P_s1109",
+        "passed": true
+      },
+      {
+        "max_absolute_errors": {
+          "density_nrmse": 0.0,
+          "density_sae": 0.0,
+          "foreground_nrmse": 0.0,
+          "physics_nrms": 0.0
+        },
+        "model": "Obs-only_s1107",
+        "passed": true
+      },
+      {
+        "max_absolute_errors": {
+          "density_nrmse": 0.0,
+          "density_sae": 0.0,
+          "foreground_nrmse": 0.0,
+          "physics_nrms": 0.0
+        },
+        "model": "Obs-only_s1108",
+        "passed": true
+      },
+      {
+        "max_absolute_errors": {
+          "density_nrmse": 0.0,
+          "density_sae": 0.0,
+          "foreground_nrmse": 0.0,
+          "physics_nrms": 0.0
+        },
+        "model": "Obs-only_s1109",
+        "passed": true
+      }
+    ],
+    "noise_realization": 0,
+    "passed": true,
+    "samples_per_model": 16
+  },
+  "tables": {
+    "checks": [
+      {
+        "expected_mean": 127.871,
+        "expected_sd": 7.327,
+        "item": "Table4/0001/density_sae",
+        "mean": 127.87106762233334,
+        "passed": true,
+        "sample_sd": 7.327216349918492
+      },
+      {
+        "expected_mean": 0.3684,
+        "expected_sd": 0.0234,
+        "item": "Table4/0001/density_nrmse",
+        "mean": 0.3684030184526667,
+        "passed": true,
+        "sample_sd": 0.02339988488434309
+      },
+      {
+        "expected_mean": 0.3413,
+        "expected_sd": 0.0214,
+        "item": "Table4/0001/foreground_nrmse",
+        "mean": 0.341321923118,
+        "passed": true,
+        "sample_sd": 0.021403637254218948
+      },
+      {
+        "expected_mean": 0.2469,
+        "expected_sd": 0.0298,
+        "item": "Table4/0001/physics_nrms",
+        "mean": 0.246927178828,
+        "passed": true,
+        "sample_sd": 0.02979743682765227
+      },
+      {
+        "expected_mean": 106.442,
+        "expected_sd": 5.417,
+        "item": "Table4/1001/density_sae",
+        "mean": 106.44173728033333,
+        "passed": true,
+        "sample_sd": 5.416580950862236
+      },
+      {
+        "expected_mean": 0.3234,
+        "expected_sd": 0.0113,
+        "item": "Table4/1001/density_nrmse",
+        "mean": 0.32344767910633326,
+        "passed": true,
+        "sample_sd": 0.011315369679090796
+      },
+      {
+        "expected_mean": 0.294,
+        "expected_sd": 0.0076,
+        "item": "Table4/1001/foreground_nrmse",
+        "mean": 0.29398443950366665,
+        "passed": true,
+        "sample_sd": 0.007565087835907351
+      },
+      {
+        "expected_mean": 0.2136,
+        "expected_sd": 0.0245,
+        "item": "Table4/1001/physics_nrms",
+        "mean": 0.213604386416,
+        "passed": true,
+        "sample_sd": 0.024462652090325002
+      },
+      {
+        "expected_mean": 91.352,
+        "expected_sd": 4.562,
+        "item": "Table4/0101/density_sae",
+        "mean": 91.3524325934,
+        "passed": true,
+        "sample_sd": 4.562166919436114
+      },
+      {
+        "expected_mean": 0.2934,
+        "expected_sd": 0.0137,
+        "item": "Table4/0101/density_nrmse",
+        "mean": 0.29340580924133336,
+        "passed": true,
+        "sample_sd": 0.013694925931579935
+      },
+      {
+        "expected_mean": 0.2681,
+        "expected_sd": 0.0134,
+        "item": "Table4/0101/foreground_nrmse",
+        "mean": 0.2681268586466667,
+        "passed": true,
+        "sample_sd": 0.013400307252948046
+      },
+      {
+        "expected_mean": 0.1272,
+        "expected_sd": 0.0143,
+        "item": "Table4/0101/physics_nrms",
+        "mean": 0.12716431372733333,
+        "passed": true,
+        "sample_sd": 0.014261030387350606
+      },
+      {
+        "expected_mean": 79.228,
+        "expected_sd": 2.74,
+        "item": "Table4/1101/density_sae",
+        "mean": 79.22809455453334,
+        "passed": true,
+        "sample_sd": 2.740062404004453
+      },
+      {
+        "expected_mean": 0.2676,
+        "expected_sd": 0.003,
+        "item": "Table4/1101/density_nrmse",
+        "mean": 0.2676068918116667,
+        "passed": true,
+        "sample_sd": 0.003023778153251005
+      },
+      {
+        "expected_mean": 0.2416,
+        "expected_sd": 0.0012,
+        "item": "Table4/1101/foreground_nrmse",
+        "mean": 0.241575961915,
+        "passed": true,
+        "sample_sd": 0.0011961439377667243
+      },
+      {
+        "expected_mean": 0.1132,
+        "expected_sd": 0.0091,
+        "item": "Table4/1101/physics_nrms",
+        "mean": 0.113238100853,
+        "passed": true,
+        "sample_sd": 0.009106864871381258
+      },
+      {
+        "expected_mean": 126.669,
+        "expected_sd": 6.308,
+        "item": "Table5/0001C/density_sae",
+        "mean": 126.66932978800001,
+        "passed": true,
+        "sample_sd": 6.307713053615703
+      },
+      {
+        "expected_mean": 0.2422,
+        "expected_sd": 0.0251,
+        "item": "Table5/0001C/physics_nrms",
+        "mean": 0.24224156691933332,
+        "passed": true,
+        "sample_sd": 0.02506212654967746
+      },
+      {
+        "expected_mean": 106.097,
+        "expected_sd": 5.465,
+        "item": "Table5/1001C/density_sae",
+        "mean": 106.09713764766667,
+        "passed": true,
+        "sample_sd": 5.465496219477842
+      },
+      {
+        "expected_mean": 0.2156,
+        "expected_sd": 0.0234,
+        "item": "Table5/1001C/physics_nrms",
+        "mean": 0.21560279528566664,
+        "passed": true,
+        "sample_sd": 0.02341624369111068
+      },
+      {
+        "expected_mean": 82.936,
+        "expected_sd": 2.538,
+        "item": "Table6/validation_iid/SAE",
+        "mean": 82.93576701267243,
+        "passed": true,
+        "sample_sd": 2.5376909576424644
+      },
+      {
+        "expected_mean": 0.1355,
+        "expected_sd": 0.009,
+        "item": "Table6/validation_iid/Physics NRMS",
+        "mean": 0.1355272751170396,
+        "passed": true,
+        "sample_sd": 0.008963392237147236
+      },
+      {
+        "expected_mean": 82.888,
+        "expected_sd": 2.688,
+        "item": "Table6/test_locked/SAE",
+        "mean": 82.88774608193252,
+        "passed": true,
+        "sample_sd": 2.688292903717704
+      },
+      {
+        "expected_mean": 0.1365,
+        "expected_sd": 0.0088,
+        "item": "Table6/test_locked/Physics NRMS",
+        "mean": 0.13649083789697722,
+        "passed": true,
+        "sample_sd": 0.008777872322108788
+      },
+      {
+        "expected_mean": 1.2141,
+        "expected_sd": 0.0379,
+        "item": "Table7/separable/T0P/difference_nrmse",
+        "mean": 1.2141400363000001,
+        "passed": true,
+        "sample_sd": 0.0379170710367019
+      },
+      {
+        "expected_mean": 0.2869,
+        "expected_sd": 0.017,
+        "item": "Table7/separable/T0P/difference_cosine",
+        "mean": 0.286905100004,
+        "passed": true,
+        "sample_sd": 0.017030507763474385
+      },
+      {
+        "expected_mean": 1.1638,
+        "expected_sd": 0.0109,
+        "item": "Table7/separable/B0P/difference_nrmse",
+        "mean": 1.16375161735,
+        "passed": true,
+        "sample_sd": 0.010925635576160133
+      },
+      {
+        "expected_mean": 0.306,
+        "expected_sd": 0.0062,
+        "item": "Table7/separable/B0P/difference_cosine",
+        "mean": 0.306006708684,
+        "passed": true,
+        "sample_sd": 0.006177249517809571
+      },
+      {
+        "expected_mean": 1.1407,
+        "expected_sd": 0.0352,
+        "item": "Table7/separable/0001/difference_nrmse",
+        "mean": 1.1406914992033335,
+        "passed": true,
+        "sample_sd": 0.03517162856848347
+      },
+      {
+        "expected_mean": 0.2995,
+        "expected_sd": 0.016,
+        "item": "Table7/separable/0001/difference_cosine",
+        "mean": 0.2994804157306667,
+        "passed": true,
+        "sample_sd": 0.01604977675039969
+      },
+      {
+        "expected_mean": 1.0967,
+        "expected_sd": 0.01,
+        "item": "Table7/separable/1101/difference_nrmse",
+        "mean": 1.0967472375533334,
+        "passed": true,
+        "sample_sd": 0.009986857513152014
+      },
+      {
+        "expected_mean": 0.367,
+        "expected_sd": 0.0055,
+        "item": "Table7/separable/1101/difference_cosine",
+        "mean": 0.366965279463,
+        "passed": true,
+        "sample_sd": 0.005485055193385095
+      },
+      {
+        "expected_mean": 1.1137,
+        "expected_sd": 0.0086,
+        "item": "Table7/shape/T0P/difference_nrmse",
+        "mean": 1.1136858144633333,
+        "passed": true,
+        "sample_sd": 0.008571983441174023
+      },
+      {
+        "expected_mean": 0.0027,
+        "expected_sd": 0.003,
+        "item": "Table7/shape/T0P/difference_cosine",
+        "mean": 0.002730837001216333,
+        "passed": true,
+        "sample_sd": 0.002985931298495634
+      },
+      {
+        "expected_mean": 1.0322,
+        "expected_sd": 0.0105,
+        "item": "Table7/shape/B0P/difference_nrmse",
+        "mean": 1.0321875230133335,
+        "passed": true,
+        "sample_sd": 0.010499805797903026
+      },
+      {
+        "expected_mean": 0.2157,
+        "expected_sd": 0.0291,
+        "item": "Table7/shape/B0P/difference_cosine",
+        "mean": 0.21566263932033336,
+        "passed": true,
+        "sample_sd": 0.029083661480720755
+      },
+      {
+        "expected_mean": 1.0418,
+        "expected_sd": 0.0131,
+        "item": "Table7/shape/0001/difference_nrmse",
+        "mean": 1.0417503455366666,
+        "passed": true,
+        "sample_sd": 0.013118395790759305
+      },
+      {
+        "expected_mean": 0.1851,
+        "expected_sd": 0.0054,
+        "item": "Table7/shape/0001/difference_cosine",
+        "mean": 0.18508796372266667,
+        "passed": true,
+        "sample_sd": 0.005390367222735148
+      },
+      {
+        "expected_mean": 0.9721,
+        "expected_sd": 0.0097,
+        "item": "Table7/shape/1101/difference_nrmse",
+        "mean": 0.9720843892016667,
+        "passed": true,
+        "sample_sd": 0.009737262499424998
+      },
+      {
+        "expected_mean": 0.2912,
+        "expected_sd": 0.0149,
+        "item": "Table7/shape/1101/difference_cosine",
+        "mean": 0.29122426816633334,
+        "passed": true,
+        "sample_sd": 0.014877670356004045
+      },
+      {
+        "expected_mean": 139.174,
+        "expected_sd": 8.089,
+        "item": "Table8/T0P/density_sae",
+        "mean": 139.17385849433333,
+        "passed": true,
+        "sample_sd": 8.089098313034158
+      },
+      {
+        "expected_mean": 0.2557,
+        "expected_sd": 0.0187,
+        "item": "Table8/T0P/physics_nrms",
+        "mean": 0.25574018338233334,
+        "passed": true,
+        "sample_sd": 0.018666533123889897
+      },
+      {
+        "expected_mean": 150.788,
+        "expected_sd": 2.084,
+        "item": "Table8/B0P/density_sae",
+        "mean": 150.78767418833334,
+        "passed": true,
+        "sample_sd": 2.084090085283381
+      },
+      {
+        "expected_mean": 0.2765,
+        "expected_sd": 0.012,
+        "item": "Table8/B0P/physics_nrms",
+        "mean": 0.27645460063300004,
+        "passed": true,
+        "sample_sd": 0.011961880919931642
+      },
+      {
+        "expected_mean": 128.105,
+        "expected_sd": 6.939,
+        "item": "Table8/0001/density_sae",
+        "mean": 128.10495073066667,
+        "passed": true,
+        "sample_sd": 6.939146652494377
+      },
+      {
+        "expected_mean": 0.2488,
+        "expected_sd": 0.0289,
+        "item": "Table8/0001/physics_nrms",
+        "mean": 0.24883605753333335,
+        "passed": true,
+        "sample_sd": 0.028868812758277646
+      },
+      {
+        "expected_mean": 106.492,
+        "expected_sd": 5.352,
+        "item": "Table8/1001/density_sae",
+        "mean": 106.491777758,
+        "passed": true,
+        "sample_sd": 5.351690831987153
+      },
+      {
+        "expected_mean": 0.214,
+        "expected_sd": 0.0239,
+        "item": "Table8/1001/physics_nrms",
+        "mean": 0.214021807988,
+        "passed": true,
+        "sample_sd": 0.023851979507486843
+      },
+      {
+        "expected_mean": 91.714,
+        "expected_sd": 4.129,
+        "item": "Table8/0101/density_sae",
+        "mean": 91.71417515403334,
+        "passed": true,
+        "sample_sd": 4.128653592177123
+      },
+      {
+        "expected_mean": 0.1288,
+        "expected_sd": 0.0139,
+        "item": "Table8/0101/physics_nrms",
+        "mean": 0.12880405031533335,
+        "passed": true,
+        "sample_sd": 0.013872179583748912
+      },
+      {
+        "expected_mean": 79.161,
+        "expected_sd": 2.841,
+        "item": "Table8/1101/density_sae",
+        "mean": 79.16075823743334,
+        "passed": true,
+        "sample_sd": 2.840717714531624
+      },
+      {
+        "expected_mean": 0.1143,
+        "expected_sd": 0.009,
+        "item": "Table8/1101/physics_nrms",
+        "mean": 0.114274214348,
+        "passed": true,
+        "sample_sd": 0.008994726497578067
+      },
+      {
+        "expected_mean": 127.688,
+        "expected_sd": 6.688,
+        "item": "Table8/0001C/density_sae",
+        "mean": 127.68825324333334,
+        "passed": true,
+        "sample_sd": 6.688414385999003
+      },
+      {
+        "expected_mean": 0.244,
+        "expected_sd": 0.0242,
+        "item": "Table8/0001C/physics_nrms",
+        "mean": 0.2440447644606667,
+        "passed": true,
+        "sample_sd": 0.024186597057557293
+      },
+      {
+        "expected_mean": 106.178,
+        "expected_sd": 5.412,
+        "item": "Table8/1001C/density_sae",
+        "mean": 106.178483642,
+        "passed": true,
+        "sample_sd": 5.412267859914501
+      },
+      {
+        "expected_mean": 0.2159,
+        "expected_sd": 0.0226,
+        "item": "Table8/1001C/physics_nrms",
+        "mean": 0.21592533976033332,
+        "passed": true,
+        "sample_sd": 0.02263669506865242
+      }
+    ],
+    "note": "Noise is averaged within model; SD is across three training seeds (ddof=1).",
+    "passed": true
+  }
+}

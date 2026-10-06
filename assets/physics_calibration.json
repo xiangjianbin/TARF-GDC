@@ -1,0 +1,52 @@
+{
+  "calibrated_at": "paired initial baseline predictions; no optimisation or validation selection",
+  "physics_target": "clean",
+  "physics_weight": 1.9504151332365432e-07,
+  "records": [
+    {
+      "density_gradient_norm": 0.0016729257768020034,
+      "density_mse": 0.09170717746019363,
+      "label_relative_error": 2.3355491407528461e-07,
+      "physics_gradient_norm": 1532.3570556640625,
+      "physics_loss": 20577.71484375,
+      "proposed_weight": 2.183467319993543e-07
+    },
+    {
+      "density_gradient_norm": 0.001897315727546811,
+      "density_mse": 0.11795847862958908,
+      "label_relative_error": 1.6235881616921688e-07,
+      "physics_gradient_norm": 1865.8692626953125,
+      "physics_loss": 31512.546875,
+      "proposed_weight": 2.0337070399091876e-07
+    },
+    {
+      "density_gradient_norm": 0.0015963896876201034,
+      "density_mse": 0.08350794017314911,
+      "label_relative_error": 1.752672318389159e-07,
+      "physics_gradient_norm": 1861.491455078125,
+      "physics_loss": 23821.10546875,
+      "proposed_weight": 1.715172726971346e-07
+    },
+    {
+      "density_gradient_norm": 0.0015666693216189742,
+      "density_mse": 0.08042749762535095,
+      "label_relative_error": 1.7970027954561374e-07,
+      "physics_gradient_norm": 1678.163818359375,
+      "physics_loss": 21877.08203125,
+      "proposed_weight": 1.8671232265638988e-07
+    }
+  ],
+  "rule": "median across 4 training batches: 0.2 * ||d L_density / d rho|| / ||d L_physics / d rho||",
+  "samples": 32,
+  "seed": 1107,
+  "source_hashes": {
+    "calibrate_physics.py": "512f7bde263ba7eea0abcf39420145d4300028396552dc04beac66c3a934bdb2",
+    "v024_inversion/complementarity.py": "342a9da698d624cf9b7f2c4661082744f34e0c000c4afa7f9253e46b74b2e3b1",
+    "v024_inversion/data.py": "96fb64443855467daa918565cf30caf279cf83b0389b9570e5f071e570d6c795",
+    "v024_inversion/losses.py": "413a38cac09a23b927661287a8ea28354f6b23f028b8142a927f7a61069d5524",
+    "v024_inversion/model.py": "5d060102c814fa49fcbfcad0802ec75ce4eae7e816bac0e0614af898619758ac",
+    "v024_inversion/physics.py": "8a9445d0c02535fcca7a83cb83b1e21bef6e1a1bda46c741065aceb03e08dada"
+  },
+  "split": "train",
+  "status": "PASS"
+}

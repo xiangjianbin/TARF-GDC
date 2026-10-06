@@ -1,0 +1,5 @@
+case,z_index,y_index,x_index,depth_km
+Ordinary,10,21,13,0.34375
+Shape pair A,10,17,17,0.34375
+Shape pair B,12,17,17,0.21875
+Deep endpoint,4,23,23,0.71875

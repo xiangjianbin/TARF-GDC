@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "examples": {
+    "ordinary": {
+      "endpoints": 8,
+      "completed": true
+    },
+    "separable": {
+      "endpoints": 8,
+      "completed": true
+    },
+    "shape": {
+      "endpoints": 4,
+      "completed": true
+    }
+  },
+  "historical_dataset_regenerated": false
+}

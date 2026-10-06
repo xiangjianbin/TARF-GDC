@@ -1,0 +1,10 @@
+{
+  "method": "IRLS",
+  "beta": 3.0,
+  "score": 1.007075520318184,
+  "converged_fraction": 0.75,
+  "max_relative_kkt": 1.4444006095522623e-05,
+  "max_relative_change": 0.0009948807875306705,
+  "elapsed_seconds": 144.4180528568104,
+  "n_endpoints": 12
+}

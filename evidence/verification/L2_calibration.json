@@ -1,0 +1,91 @@
+{
+  "calibration": true,
+  "calibration_selection_requires_all_endpoints_converged": true,
+  "diagnostic_only": false,
+  "irls_historical_warm_start": false,
+  "method": "L2",
+  "protocol": {
+    "epsilon": 0.01,
+    "max_iterations": 6000,
+    "max_outer": 80,
+    "outer_tolerance": 0.001,
+    "smoothness": 1.0,
+    "tolerance": 1e-05
+  },
+  "results": [
+    {
+      "beta": 0.01,
+      "converged": true,
+      "elapsed_seconds": 77.72907567024231,
+      "score": 1.4164833776007812
+    },
+    {
+      "beta": 0.1,
+      "converged": true,
+      "elapsed_seconds": 58.0180299282074,
+      "score": 0.9953926543961408
+    },
+    {
+      "beta": 0.3,
+      "converged": true,
+      "elapsed_seconds": 43.59837889671326,
+      "score": 0.9299899098670313
+    },
+    {
+      "beta": 1.0,
+      "converged": true,
+      "elapsed_seconds": 36.093369007110596,
+      "score": 0.912130990285052
+    },
+    {
+      "beta": 3.0,
+      "converged": true,
+      "elapsed_seconds": 32.62325048446655,
+      "score": 0.9203208345561347
+    },
+    {
+      "beta": 10.0,
+      "converged": true,
+      "elapsed_seconds": 18.828041791915894,
+      "score": 0.9372722637163697
+    },
+    {
+      "beta": 30.0,
+      "converged": true,
+      "elapsed_seconds": 10.82561731338501,
+      "score": 0.9463815246721975
+    },
+    {
+      "beta": 100.0,
+      "converged": true,
+      "elapsed_seconds": 5.233262777328491,
+      "score": 0.943833112104791
+    },
+    {
+      "beta": 300.0,
+      "converged": true,
+      "elapsed_seconds": 2.8809404373168945,
+      "score": 0.9319576686429643
+    },
+    {
+      "beta": 1000.0,
+      "converged": true,
+      "elapsed_seconds": 1.7422223091125488,
+      "score": 0.9094257652963919
+    },
+    {
+      "beta": 3000.0,
+      "converged": true,
+      "elapsed_seconds": 1.4260492324829102,
+      "score": 0.887052153253045
+    },
+    {
+      "beta": 10000.0,
+      "converged": true,
+      "elapsed_seconds": 1.1376161575317383,
+      "score": 0.8882126919473041
+    }
+  ],
+  "samples": 12,
+  "selected_beta": 3000.0
+}

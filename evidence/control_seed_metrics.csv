@@ -1,0 +1,97 @@
+split,seed,group,metric,model,value,n
+validation_iid,1107,all,SAE,Obs-only,80.07723914546966,2500
+validation_iid,1107,all,SAE,Full,76.1430990191269,2500
+validation_iid,1107,all,Physics NRMS,Obs-only,0.12642959749162191,2500
+validation_iid,1107,all,Physics NRMS,Full,0.10339785562574859,2500
+validation_iid,1107,separable,差值NRMSE,Obs-only,1.102011429820127,325
+validation_iid,1107,separable,差值NRMSE,Full,1.0869372990364907,325
+validation_iid,1107,separable,差异余弦,Obs-only,0.3189139319371659,325
+validation_iid,1107,separable,差异余弦,Full,0.372782971261994,325
+validation_iid,1107,separable,DMR,Obs-only,0.8495529825516374,325
+validation_iid,1107,separable,DMR,Full,0.9203012511148091,325
+validation_iid,1107,shape,差值NRMSE,Obs-only,1.020495222995424,325
+validation_iid,1107,shape,差值NRMSE,Full,0.9609845799599075,325
+validation_iid,1107,shape,差异余弦,Obs-only,0.15762366461486133,325
+validation_iid,1107,shape,差异余弦,Full,0.3077866667373255,325
+validation_iid,1107,shape,DMR,Obs-only,0.3942165308835797,325
+validation_iid,1107,shape,DMR,Full,0.5161937449905225,325
+test_locked,1107,all,SAE,Obs-only,80.03132618767876,10710
+test_locked,1107,all,SAE,Full,76.13701178893544,10710
+test_locked,1107,all,Physics NRMS,Obs-only,0.1282329902874808,10710
+test_locked,1107,all,Physics NRMS,Full,0.10492398386829845,10710
+test_locked,1107,separable,差值NRMSE,Obs-only,1.1160863415690343,1427
+test_locked,1107,separable,差值NRMSE,Full,1.0973321601535002,1427
+test_locked,1107,separable,差异余弦,Obs-only,0.31447115377776436,1427
+test_locked,1107,separable,差异余弦,Full,0.3698798610522539,1427
+test_locked,1107,separable,DMR,Obs-only,0.869531995785068,1427
+test_locked,1107,separable,DMR,Full,0.9339356431111394,1427
+test_locked,1107,shape,差值NRMSE,Obs-only,1.0143353835450117,1428
+test_locked,1107,shape,差值NRMSE,Full,0.9576780299462613,1428
+test_locked,1107,shape,差异余弦,Obs-only,0.17335158820514235,1428
+test_locked,1107,shape,差异余弦,Full,0.3182034569259109,1428
+test_locked,1107,shape,DMR,Obs-only,0.402395897332291,1428
+test_locked,1107,shape,DMR,Full,0.5253422837344353,1428
+validation_iid,1108,all,SAE,Obs-only,84.92314314002991,2500
+validation_iid,1108,all,SAE,Full,81.3789046495819,2500
+validation_iid,1108,all,Physics NRMS,Obs-only,0.1443500578653812,2500
+validation_iid,1108,all,Physics NRMS,Full,0.12136947994768615,2500
+validation_iid,1108,separable,差值NRMSE,Obs-only,1.1192708092967083,325
+validation_iid,1108,separable,差值NRMSE,Full,1.1069020784974144,325
+validation_iid,1108,separable,差异余弦,Obs-only,0.32427790789583916,325
+validation_iid,1108,separable,差异余弦,Full,0.3618880984710389,325
+validation_iid,1108,separable,DMR,Obs-only,0.8922804792708187,325
+validation_iid,1108,separable,DMR,Full,0.9378538565658889,325
+validation_iid,1108,shape,差值NRMSE,Obs-only,1.0178852446856625,325
+validation_iid,1108,shape,差值NRMSE,Full,0.9791866974688159,325
+validation_iid,1108,shape,差异余弦,Obs-only,0.17529694995849637,325
+validation_iid,1108,shape,差异余弦,Full,0.2789920828761295,325
+validation_iid,1108,shape,DMR,Obs-only,0.4094700876395924,325
+validation_iid,1108,shape,DMR,Full,0.50630476178967,325
+test_locked,1108,all,SAE,Obs-only,85.36836648936587,10710
+test_locked,1108,all,SAE,Full,81.77371964843779,10710
+test_locked,1108,all,Physics NRMS,Obs-only,0.1457096543476458,10710
+test_locked,1108,all,Physics NRMS,Full,0.12286532208622611,10710
+test_locked,1108,separable,差值NRMSE,Obs-only,1.1260106267168017,1427
+test_locked,1108,separable,差值NRMSE,Full,1.1121645822012,1427
+test_locked,1108,separable,差异余弦,Obs-only,0.32064836016125786,1427
+test_locked,1108,separable,差异余弦,Full,0.3599716195943255,1427
+test_locked,1108,separable,DMR,Obs-only,0.899656002327159,1427
+test_locked,1108,separable,DMR,Full,0.9448284420768317,1427
+test_locked,1108,shape,差值NRMSE,Obs-only,1.0137553183879866,1428
+test_locked,1108,shape,差值NRMSE,Full,0.9806739249649516,1428
+test_locked,1108,shape,差异余弦,Obs-only,0.18681417909351244,1428
+test_locked,1108,shape,差异余弦,Full,0.2815430149058107,1428
+test_locked,1108,shape,DMR,Obs-only,0.4236158811397216,1428
+test_locked,1108,shape,DMR,Full,0.5144614541693456,1428
+validation_iid,1109,all,SAE,Obs-only,83.8069187525177,2500
+validation_iid,1109,all,SAE,Full,80.1622799948883,2500
+validation_iid,1109,all,Physics NRMS,Obs-only,0.13580216999411576,2500
+validation_iid,1109,all,Physics NRMS,Full,0.11494696698456998,2500
+validation_iid,1109,separable,差值NRMSE,Obs-only,1.1095364659846683,325
+validation_iid,1109,separable,差值NRMSE,Full,1.096402335123549,325
+validation_iid,1109,separable,差异余弦,Obs-only,0.32497761629159116,325
+validation_iid,1109,separable,差异余弦,Full,0.36622476865622294,325
+validation_iid,1109,separable,DMR,Obs-only,0.8751843388659042,325
+validation_iid,1109,separable,DMR,Full,0.9281989924300386,325
+validation_iid,1109,shape,差值NRMSE,Obs-only,1.024832095523486,325
+validation_iid,1109,shape,差值NRMSE,Full,0.9760818901761165,325
+validation_iid,1109,shape,差异余弦,Obs-only,0.1598225327464877,325
+validation_iid,1109,shape,差异余弦,Full,0.28689405488570635,325
+validation_iid,1109,shape,DMR,Obs-only,0.4189329258939903,325
+validation_iid,1109,shape,DMR,Full,0.5271975942847202,325
+test_locked,1109,all,SAE,Obs-only,83.2635455687529,10710
+test_locked,1109,all,SAE,Full,79.57154327502103,10710
+test_locked,1109,all,Physics NRMS,Obs-only,0.135529869055805,10710
+test_locked,1109,all,Physics NRMS,Full,0.11503333709034871,10710
+test_locked,1109,separable,差值NRMSE,Obs-only,1.1189740020397627,1427
+test_locked,1109,separable,差值NRMSE,Full,1.1006234380254634,1427
+test_locked,1109,separable,差异余弦,Obs-only,0.31877965577808703,1427
+test_locked,1109,separable,差异余弦,Full,0.36585324602811387,1427
+test_locked,1109,separable,DMR,Obs-only,0.883976606657037,1427
+test_locked,1109,separable,DMR,Full,0.9353507846593726,1427
+test_locked,1109,shape,差值NRMSE,Obs-only,1.019444320280755,1428
+test_locked,1109,shape,差值NRMSE,Full,0.9762622074463061,1428
+test_locked,1109,shape,差异余弦,Obs-only,0.173522488169657,1428
+test_locked,1109,shape,差异余弦,Full,0.28976434248645916,1428
+test_locked,1109,shape,DMR,Obs-only,0.42774109003226496,1428
+test_locked,1109,shape,DMR,Full,0.5312527499096653,1428

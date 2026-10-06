@@ -1,0 +1,174 @@
+{
+  "method": "L2",
+  "selected": {
+    "method": "L2",
+    "beta": 3000.0,
+    "score": 0.887052153253045,
+    "converged_fraction": 1.0,
+    "max_relative_kkt": 4.345963093601842e-06,
+    "max_relative_change": 0.0,
+    "elapsed_seconds": 0.836525467922911,
+    "n_endpoints": 12
+  },
+  "grid": [
+    {
+      "method": "L2",
+      "beta": 0.01,
+      "score": 1.4164833776007812,
+      "converged_fraction": 1.0,
+      "max_relative_kkt": 9.943836084501377e-06,
+      "max_relative_change": 0.0,
+      "elapsed_seconds": 69.83942169486545,
+      "n_endpoints": 12
+    },
+    {
+      "method": "L2",
+      "beta": 0.1,
+      "score": 0.9953926543961408,
+      "converged_fraction": 1.0,
+      "max_relative_kkt": 9.418451414376374e-06,
+      "max_relative_change": 0.0,
+      "elapsed_seconds": 55.23274753894657,
+      "n_endpoints": 12
+    },
+    {
+      "method": "L2",
+      "beta": 0.3,
+      "score": 0.9299899098670313,
+      "converged_fraction": 1.0,
+      "max_relative_kkt": 9.526900604283381e-06,
+      "max_relative_change": 0.0,
+      "elapsed_seconds": 42.46001922781579,
+      "n_endpoints": 12
+    },
+    {
+      "method": "L2",
+      "beta": 1.0,
+      "score": 0.912130990285052,
+      "converged_fraction": 1.0,
+      "max_relative_kkt": 9.259246889718998e-06,
+      "max_relative_change": 0.0,
+      "elapsed_seconds": 35.47991794091649,
+      "n_endpoints": 12
+    },
+    {
+      "method": "L2",
+      "beta": 3.0,
+      "score": 0.9203208345561347,
+      "converged_fraction": 1.0,
+      "max_relative_kkt": 9.518267402296948e-06,
+      "max_relative_change": 0.0,
+      "elapsed_seconds": 31.12499943887815,
+      "n_endpoints": 12
+    },
+    {
+      "method": "L2",
+      "beta": 10.0,
+      "score": 0.9372722637163697,
+      "converged_fraction": 1.0,
+      "max_relative_kkt": 9.517982861502295e-06,
+      "max_relative_change": 0.0,
+      "elapsed_seconds": 17.76157343108207,
+      "n_endpoints": 12
+    },
+    {
+      "method": "L2",
+      "beta": 30.0,
+      "score": 0.9463815246721975,
+      "converged_fraction": 1.0,
+      "max_relative_kkt": 9.743374768283635e-06,
+      "max_relative_change": 0.0,
+      "elapsed_seconds": 9.977418256923556,
+      "n_endpoints": 12
+    },
+    {
+      "method": "L2",
+      "beta": 100.0,
+      "score": 0.943833112104791,
+      "converged_fraction": 1.0,
+      "max_relative_kkt": 9.69591883927473e-06,
+      "max_relative_change": 0.0,
+      "elapsed_seconds": 4.751386069925502,
+      "n_endpoints": 12
+    },
+    {
+      "method": "L2",
+      "beta": 300.0,
+      "score": 0.9319576686429643,
+      "converged_fraction": 1.0,
+      "max_relative_kkt": 7.618839505611579e-06,
+      "max_relative_change": 0.0,
+      "elapsed_seconds": 2.4355487381108105,
+      "n_endpoints": 12
+    },
+    {
+      "method": "L2",
+      "beta": 1000.0,
+      "score": 0.9094257652963919,
+      "converged_fraction": 1.0,
+      "max_relative_kkt": 4.585470983993301e-06,
+      "max_relative_change": 0.0,
+      "elapsed_seconds": 1.2945195229258388,
+      "n_endpoints": 12
+    },
+    {
+      "method": "L2",
+      "beta": 3000.0,
+      "score": 0.887052153253045,
+      "converged_fraction": 1.0,
+      "max_relative_kkt": 4.345963093601842e-06,
+      "max_relative_change": 0.0,
+      "elapsed_seconds": 0.836525467922911,
+      "n_endpoints": 12
+    },
+    {
+      "method": "L2",
+      "beta": 10000.0,
+      "score": 0.8882126919473041,
+      "converged_fraction": 1.0,
+      "max_relative_kkt": 3.0917742361690956e-06,
+      "max_relative_change": 0.0,
+      "elapsed_seconds": 0.6462908477988094,
+      "n_endpoints": 12
+    }
+  ],
+  "beta_grid": [
+    0.01,
+    0.1,
+    0.3,
+    1.0,
+    3.0,
+    10.0,
+    30.0,
+    100.0,
+    300.0,
+    1000.0,
+    3000.0,
+    10000.0
+  ],
+  "calibration_split": "train",
+  "calibration_indices": [
+    935,
+    2869,
+    4181,
+    5102,
+    5732,
+    8067,
+    11289,
+    12836,
+    18674,
+    20943,
+    21714,
+    22263
+  ],
+  "solver": {
+    "max_iterations": 6000,
+    "tolerance": 1e-05,
+    "max_outer": 80,
+    "outer_tolerance": 0.001,
+    "epsilon": 0.01,
+    "smoothness": 1.0
+  },
+  "selection_score": "mean(foreground_nrmse + background_nrmse) over 12 current-V023 train endpoints",
+  "selection_requires_all_endpoints_converged": true
+}

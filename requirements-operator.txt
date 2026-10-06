@@ -1,0 +1,4 @@
+# Only needed to regenerate the SimPEG matrix, not to load the frozen matrix.
+-r requirements.txt
+simpeg==0.22.2
+discretize==0.10.0

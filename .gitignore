@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.env
+.env.*
+outputs/
+generation_work/
+dataset/
+checkpoints/
+restricted_field/
+TARF-GDC-assets/
+*.pt
+*.pth
+*.log
+*.lock
+.DS_Store

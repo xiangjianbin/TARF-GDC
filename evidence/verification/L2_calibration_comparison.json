@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "samples": 12,
+  "beta_candidates": 12,
+  "max_absolute_score_difference": 0.0,
+  "selected_beta": 3000.0
+}

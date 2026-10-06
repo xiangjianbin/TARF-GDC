@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "comparisons": {
+    "sensitivity_role_sha256": {
+      "expected": "0800691abbcb28cbfa35418f12cb96affc5049f11943704791e6ca80b2bab37c",
+      "recomputed": "0800691abbcb28cbfa35418f12cb96affc5049f11943704791e6ca80b2bab37c"
+    },
+    "sensitivity_tzz_sha256": {
+      "expected": "d75621dadaae6b3dd805ffdf69ed35ddae05a7adba9043a145ee47fc2d09bbd0",
+      "recomputed": "d75621dadaae6b3dd805ffdf69ed35ddae05a7adba9043a145ee47fc2d09bbd0"
+    },
+    "backprojection_scale_role": {
+      "expected": 57.82338703054486,
+      "recomputed": 57.82338703054486
+    },
+    "backprojection_scale_tzz": {
+      "expected": 28.893917040415488,
+      "recomputed": 28.893917040415488
+    }
+  }
+}

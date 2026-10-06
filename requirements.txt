@@ -1,0 +1,9 @@
+# Install the appropriate CPU or CUDA PyTorch wheel as described in README.md.
+torch==2.4.1
+numpy==1.24.4
+scipy==1.10.1
+pandas==2.0.3
+matplotlib==3.7.5
+Pillow==10.4.0
+threadpoolctl==3.5.0
+pytest==8.3.5

@@ -1,0 +1,109 @@
+{
+  "code_version": "v033_phys_complementarity_20260923_v1",
+  "comparison": {
+    "code": "B0P"
+  },
+  "data": {
+    "cache_directory": "${ASSETS}/cache",
+    "cache_shards": 2,
+    "difficulty_sampling": false,
+    "directory": "${ASSETS}/dataset",
+    "evaluation_observation_mode": "frozen",
+    "normalization_path": "assets/normalization.json",
+    "pair_batch": false,
+    "train_observation_mode": "online"
+  },
+  "device": "cuda",
+  "evaluation": {
+    "primary_metric": "density_sae",
+    "realizations": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "split": "validation_iid"
+  },
+  "experiment_id": "phys_baseline_B0P_s1109",
+  "initialization": {
+    "paired": true
+  },
+  "loss": {
+    "density_weight": 1.0,
+    "objective": "mse_physics",
+    "physics_mode": "roles",
+    "physics_target": "clean",
+    "physics_weight": 1.9504151332365432e-07,
+    "role_noise_scales": [
+      0.5324628312536629,
+      0.7,
+      0.7,
+      0.30052038200428266,
+      0.31
+    ]
+  },
+  "model": {
+    "dropout": 0.05,
+    "gate_bias": 1.0,
+    "max_density_gcc": 0.85,
+    "output_mode": "linear",
+    "predict_logvar": false,
+    "sab_gate_bias": 1.0,
+    "sab_lambda": 0.25,
+    "sab_mode": "centered",
+    "use_tik": false,
+    "variant": "b0",
+    "width": 32
+  },
+  "noise": {
+    "reference_component_sigma_eotvos": [
+      0.425,
+      0.31,
+      0.7,
+      0.425,
+      0.7,
+      0.74
+    ]
+  },
+  "operator": {
+    "audit_path": "assets/operator_audit.json",
+    "density_shape": [
+      16,
+      32,
+      32
+    ],
+    "g6_path": "${ASSETS}/operator/g6.npy",
+    "receiver_shape": [
+      33,
+      33
+    ],
+    "sensitivity_floor_fraction": 0.001,
+    "sensitivity_role_path": "assets/sensitivity_role.npy",
+    "sensitivity_tzz_path": "assets/sensitivity_tzz.npy"
+  },
+  "output_root": "outputs/training",
+  "phase": "formal",
+  "seed": 1109,
+  "task": {
+    "input_mode": "roles",
+    "physics_mode": "roles"
+  },
+  "training": {
+    "amp_dtype": "bf16",
+    "batch_size": 16,
+    "checkpoint_metric": "density_sae",
+    "checkpoint_mode": "min",
+    "cpu_threads": 2,
+    "epochs": 50,
+    "gradient_clip": 1.0,
+    "learning_rate": 0.0001,
+    "log_interval": 500,
+    "max_steps": 0,
+    "num_workers": 1,
+    "prefetch_factor": 2,
+    "save_geometry_checkpoint": false,
+    "warmup_fraction": 0.05,
+    "weight_decay": 0.0001
+  }
+}

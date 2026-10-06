@@ -1,0 +1,180 @@
+{
+  "dataset": "LOCAL_RELEASE/TARF-GDC-assets/dataset",
+  "elapsed_seconds": 196.08935236930847,
+  "failures": [],
+  "independent_physics_audit": {
+    "maximum_component_relative_l2": 1.0290277591432996e-07,
+    "method": "independent_nagy_rectangular_prism_corner_sum",
+    "prism_count": 3,
+    "rows": [
+      {
+        "bounds_xyz_m": [
+          [
+            1250.0,
+            2250.0
+          ],
+          [
+            1500.0,
+            2500.0
+          ],
+          [
+            -750.0,
+            -375.0
+          ]
+        ],
+        "component_relative_l2": [
+          5.986506654036099e-08,
+          5.441456606022135e-08,
+          4.293215406224962e-08,
+          6.523086194191945e-08,
+          5.288584136654283e-08,
+          5.3316546676538385e-08
+        ],
+        "density_gcc": 0.5,
+        "maximum_component_relative_l2": 6.523086194191945e-08,
+        "prism_index": 0
+      },
+      {
+        "bounds_xyz_m": [
+          [
+            2500.0,
+            3375.0
+          ],
+          [
+            375.0,
+            1375.0
+          ],
+          [
+            -937.5,
+            -687.5
+          ]
+        ],
+        "component_relative_l2": [
+          5.124187642188276e-08,
+          4.530193486140748e-08,
+          5.167753259445377e-08,
+          5.816057718274531e-08,
+          4.5561672273842935e-08,
+          4.681183488526326e-08
+        ],
+        "density_gcc": -0.35,
+        "maximum_component_relative_l2": 5.816057718274531e-08,
+        "prism_index": 1
+      },
+      {
+        "bounds_xyz_m": [
+          [
+            500.0,
+            1500.0
+          ],
+          [
+            2625.0,
+            3625.0
+          ],
+          [
+            -375.0,
+            -62.5
+          ]
+        ],
+        "component_relative_l2": [
+          1.0290277591432996e-07,
+          6.038153783834733e-08,
+          6.360283743992514e-08,
+          6.3894012121692e-08,
+          4.225758160024095e-08,
+          6.998428369109391e-08
+        ],
+        "density_gcc": 0.65,
+        "maximum_component_relative_l2": 1.0290277591432996e-07,
+        "prism_index": 2
+      }
+    ]
+  },
+  "splits": {
+    "test_locked": {
+      "depth": {
+        "ordinary_deep_fraction_ge_600m": 0.1448,
+        "separable_deep_fraction_ge_600m": 0.13314646110721795,
+        "separable_topup_deep_fraction_ge_600m": 0.13314646110721795,
+        "shape_deep_fraction_ge_600m": 0.0
+      },
+      "endpoint_contract_all_pass": true,
+      "endpoints": 10710,
+      "frozen_noise": {
+        "amplitude_scale_unique": [
+          1.0
+        ],
+        "pair_endpoint_corr_sample": 0.008978800004310674,
+        "relative_error": [
+          1.0527289692419117e-05,
+          5.315444276265957e-05,
+          5.489711054140756e-05,
+          -3.268011631529788e-06,
+          2.781641831095527e-05,
+          2.654620166819832e-05
+        ],
+        "within_5pct": true
+      },
+      "pair_gate_recompute": {
+        "all_pass": true,
+        "seconds": 2.9549787044525146,
+        "separable": 1427,
+        "shape": 1428
+      },
+      "pairs": 2855,
+      "trace_relative_rms_max": 1.5726478750366368e-06
+    },
+    "train": {
+      "depth": {
+        "ordinary_deep_fraction_ge_600m": 0.14241666666666666,
+        "separable_deep_fraction_ge_600m": 0.08061538461538462,
+        "separable_topup_deep_fraction_ge_600m": 0.14113597246127366,
+        "shape_deep_fraction_ge_600m": 0.0
+      },
+      "endpoint_contract_all_pass": true,
+      "endpoints": 25000,
+      "pair_gate_recompute": {
+        "all_pass": true,
+        "seconds": 3.769007921218872,
+        "separable": 3250,
+        "shape": 3250
+      },
+      "pairs": 6500,
+      "trace_relative_rms_max": 2.167744014514028e-06
+    },
+    "validation_iid": {
+      "depth": {
+        "ordinary_deep_fraction_ge_600m": 0.15083333333333335,
+        "separable_deep_fraction_ge_600m": 0.12615384615384614,
+        "separable_topup_deep_fraction_ge_600m": 0.12615384615384614,
+        "shape_deep_fraction_ge_600m": 0.0
+      },
+      "endpoint_contract_all_pass": true,
+      "endpoints": 2500,
+      "frozen_noise": {
+        "amplitude_scale_unique": [
+          1.0
+        ],
+        "pair_endpoint_corr_sample": 0.006437368166417718,
+        "relative_error": [
+          0.00023478825417289073,
+          -8.337766486565812e-05,
+          -0.00021631878924821546,
+          0.0002303393271410048,
+          8.224829026204361e-05,
+          -8.50571339742201e-05
+        ],
+        "within_5pct": true
+      },
+      "pair_gate_recompute": {
+        "all_pass": true,
+        "seconds": 0.3897693157196045,
+        "separable": 325,
+        "shape": 325
+      },
+      "pairs": 650,
+      "trace_relative_rms_max": 1.3053893326286925e-06
+    }
+  },
+  "verdict": "PASS"
+}

@@ -1,0 +1,22 @@
+{
+  "elapsed_seconds": 13.12,
+  "method": "global RMS of all train endpoints with deterministic V023 online epoch-0 noise; paired spin components share RMS",
+  "noise_epoch": 0,
+  "normalization": {
+    "epsilon": 1e-06,
+    "raw6_rms": [
+      18.61181546656077,
+      13.397513947714602,
+      31.85821723415287,
+      18.621759981840977,
+      31.856562401585826,
+      30.726686575919732
+    ],
+    "scalar_rms": 30.721098014088096,
+    "spin1_rms": 31.857389828614387,
+    "spin2_rms": 12.043778000304302
+  },
+  "sample_count": 25000,
+  "source_sha256sums": "75f2d230b211897ecf154ec3f6bc00592425835a6e26a505914eae19afc2c26e",
+  "split": "train"
+}

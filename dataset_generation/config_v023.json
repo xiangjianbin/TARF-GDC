@@ -1,0 +1,254 @@
+{
+  "schema_version": "23.0.0",
+  "sample_id_prefix": "v023",
+  "dataset_id": "V023_DISTINGUISHABLE_PAIRS",
+  "design_document": "docs/DATA.md",
+  "output_directory": "../V023_DISTINGUISHABLE_PAIRS_TRAIN4175",
+  "grid": {
+    "density_shape_zyx": [
+      16,
+      32,
+      32
+    ],
+    "receiver_shape_yx": [
+      33,
+      33
+    ],
+    "cell_size_xyz_m": [
+      125.0,
+      125.0,
+      62.5
+    ],
+    "origin_xyz_m": [
+      0.0,
+      0.0,
+      -1000.0
+    ],
+    "physical_extent_xyz_m": [
+      4000.0,
+      4000.0,
+      1000.0
+    ],
+    "receiver_height_m": 1.0,
+    "subvoxel_supersampling": 4
+  },
+  "operator": {
+    "g6_path": "../operator/g6_vinton_4x4x1km_16x32x32_rx33x33_v0003.npy",
+    "manifest_path": "../operator/operator_vinton_4x4x1km_16x32x32_v0003.json",
+    "g6_sha256": "544d1ceeb63f7da3e83be606e613fb5c3ff6cbe11b7585e1f85c281d71346b0c",
+    "manifest_sha256": "595da517b7559debd8ad0a0716d12400eed097b6e7018f6eb01bacbe59e6bb9e",
+    "component_order": [
+      "Txx",
+      "Txy",
+      "Txz",
+      "Tyy",
+      "Tyz",
+      "Tzz"
+    ]
+  },
+  "splits": {
+    "train": {
+      "ambiguity_pairs": 4175,
+      "seed": 2026091201,
+      "note": "V023 only adds distinguishable pairs merged into the V022 train set (6252 endpoints); full mode generates this count, smoke uses --n-pairs to override"
+    },
+    "validation_iid": {
+      "ambiguity_pairs": 0,
+      "seed": 2026091202,
+      "note": "This batch is not generated; the seeds are registered only to prevent overlap"
+    },
+    "test_locked": {
+      "ambiguity_pairs": 0,
+      "seed": 2026091203,
+      "note": "test_locked stays frozen (V022 6258 endpoints); the seeds are registered only to prevent overlap"
+    }
+  },
+  "smoke": {
+    "seed": 2026091299,
+    "default_pairs": 250,
+    "maximum_proposals_per_target": 96
+  },
+  "support_fraction_mixture": {
+    "small_0p5_2pct": {
+      "probability": 0.1,
+      "range": [
+        0.005,
+        0.02
+      ]
+    },
+    "main_2_8pct": {
+      "probability": 0.6,
+      "range": [
+        0.02,
+        0.08
+      ]
+    },
+    "large_8_18pct": {
+      "probability": 0.3,
+      "range": [
+        0.08,
+        0.18
+      ]
+    }
+  },
+  "ordinary_mechanism_mixture": {
+    "A_analytic": 0.25,
+    "B_structural": 0.25,
+    "C_irregular": 0.3,
+    "D_composite": 0.2
+  },
+  "deep_targeting": {
+    "fraction": 0.1,
+    "target_min_centroid_depth_km": 0.6,
+    "target_max_centroid_depth_km": 0.95,
+    "note": "Deep = support centroid depth >=600 m (V025 convention: depth=extent_z-z_geom); 10% targeted generation for ordinary samples and A prototypes (decided by the author on 2026-09-12); (B_structural,large) deep structures are infeasible and are repaired by mechanism exchange following the DeepVal method"
+  },
+  "density": {
+    "absolute_contrast_gcc_range": [
+      0.2,
+      0.8
+    ],
+    "positive_probability": 0.5,
+    "support_threshold_abs_gcc": 0.005,
+    "allow_mixed_sign_within_support": false
+  },
+  "geometry_quality": {
+    "minimum_support_cells": 82,
+    "minimum_horizontal_feature_cells": 2,
+    "remove_isolated_components_smaller_than_cells": 4,
+    "maximum_generation_attempts": 120,
+    "lateral_margin_cells": 1,
+    "shallow_margin_cells": 1
+  },
+  "ambiguity": {
+    "metric_version": "absolute_covariance_global_dprime_v019",
+    "gate_type": "reverse_distinguishable_v023",
+    "pair_subtype": "ambiguity_redistribution_separable",
+    "reference_component_sigma_eotvos": [
+      0.425,
+      0.31,
+      0.7,
+      0.425,
+      0.7,
+      0.74
+    ],
+    "reference_sigma_provenance": "V022 pre-registered sigma ([0.85,0.62,1.4,0.85,1.4,1.48] E, component-wise medians of V018 ordinary at 25 dB) halved; must match noise.base_component_sigma_eotvos component by component (whitening sigma = physical noise-adding sigma)",
+    "tzz_dprime_min": 5.0,
+    "spin_dprime_min": 5.0,
+    "density_nrmse_min": 0.12,
+    "dprime_bins": [
+      [
+        5.0,
+        10.0
+      ],
+      [
+        10.0,
+        20.0
+      ],
+      [
+        20.0,
+        40.0
+      ],
+        [
+        40.0,
+        1000000.0
+      ]
+    ],
+    "dprime_bin_mixture": [
+      0.25,
+      0.25,
+      0.25,
+      0.25
+    ],
+    "dominance_ratio_for_group_label": 1.5,
+    "response_group_note": "V023 sets no spin1/spin2/mixed quota (under the distinguishable-pair semantics the differences are large in all components); response_group is only labelled and recorded from the actual dominance ratio",
+    "pair_mechanism_mixture": {
+      "A_analytic": 0.25,
+      "B_structural": 0.25,
+      "C_irregular": 0.25,
+      "D_composite": 0.25
+    },
+    "pair_support_mixture": {
+      "small_0p5_2pct": 0.1,
+      "main_2_8pct": 0.6,
+      "large_8_18pct": 0.3
+    },
+    "pair_geometry_mode_mixture": {
+      "shared_support": 1.0,
+      "support_varying": 0.0
+    },
+    "pair_geometry_mode_note": "The smoke stage only builds same-support pairs (Jaccard=1); variable support (Jaccard<=0.9 and symmetric difference >=8%) is left for evaluation and implementation before the full run",
+    "support_varying_common_core_erosion_iterations": 1,
+    "support_varying_jaccard_max": 0.9,
+    "support_varying_symmetric_difference_min": 0.08,
+    "direction_construction": "random_smooth_field_v023",
+    "direction_coarse_grid_zyx": [
+      8,
+      16,
+      16
+    ],
+    "direction_smoothing_kernel": 3,
+    "direction_smooth_passes": 1,
+    "direction_normalization": "zero_mass_then_peak_abs_over_support",
+    "direction_note": "Coarse-grid standard normal -> trilinear upsampling to 16x32x32 -> kernel-3 avg_pool smoothing -> zero-mass on the support (subtract the fraction-weighted mean; redistribution does not change total mass) -> peak normalization within the support (|m|<=1) -> direction = fraction * m; the V022 Adam multi-start optimization is no longer used",
+    "base_contrast_gcc_range": [
+      0.3,
+      0.55
+    ],
+    "redistribution_amplitude_gcc_range": [
+      0.25,
+      0.35
+    ],
+    "proposal_jitter_fraction": 0.1,
+    "proposal_jitter_note": "Each proposal perturbs base_contrast/amplitude by U(1-j,1+j) around the task-card value and then clips back into the interval, equivalent to the amplitude perturbation during scale search",
+    "scale_search_min": 0.01,
+    "scale_search_max": 0.8,
+    "scale_search_steps": 160,
+    "scale_selection": "passing_set_bin_targeted_v023",
+    "maximum_proposals_per_target": 256,
+    "early_exhaustion_attempts": 64,
+    "exhausted_target_policy": "log_and_continue"
+  },
+  "noise": {
+    "type": "white_gaussian_v023",
+    "base_component_sigma_eotvos": [
+      0.425,
+      0.31,
+      0.7,
+      0.425,
+      0.7,
+      0.74
+    ],
+    "base_sigma_note": "All V022 sigmas halved; observation = clean + iid N(0,1) * sigma * amplitude; the V022 smooth/stripe/common-mode three-mode mixture is dropped",
+    "amplitude_scale_range": [
+      0.75,
+      1.5
+    ],
+    "frozen_amplitude_scale": 1.0,
+    "frozen_realizations": 5,
+    "pair_noise_is_shared": false,
+    "training_seed": 2026091211,
+    "frozen_evaluation_seeds": {
+      "validation_iid": 2026091212,
+      "test_locked": 2026091213,
+      "smoke": 2026091214
+    },
+    "frozen_seed_note": "The smoke frozen seed 2026091214 is used only for smoke self-check products and never enters any training/evaluation pipeline"
+  },
+  "audit": {
+    "forward_regression_relative_l2_max": 2e-06,
+    "independent_prism_relative_l2_max": 2e-05,
+    "noise_rms_relative_tolerance": 0.05
+  },
+  "storage": {
+    "shard_size": 250,
+    "density_dtype": "float32",
+    "response_dtype": "float32",
+    "save_volume_fraction": true,
+    "smoke_save_frozen_observation": true,
+    "save_frozen_observation_for": [
+      "validation_iid",
+      "test_locked"
+    ]
+  }
+}

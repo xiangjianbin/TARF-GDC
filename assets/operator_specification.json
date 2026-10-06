@@ -1,0 +1,52 @@
+{
+  "schema_version": "3.0",
+  "operator_id": "TRACEFREE_A6_VINTON_4X4X1KM_16X32X32_RX33X33_v0003",
+  "generator": "SimPEG Simulation3DIntegral geoana engine",
+  "density_shape_zyx": [
+    16,
+    32,
+    32
+  ],
+  "mesh_shape_xyz": [
+    32,
+    32,
+    16
+  ],
+  "cell_size_xyz_m": [
+    125.0,
+    125.0,
+    62.5
+  ],
+  "physical_extent_xyz_m": [
+    4000.0,
+    4000.0,
+    1000.0
+  ],
+  "origin_xyz_m": [
+    0.0,
+    0.0,
+    -1000.0
+  ],
+  "receiver_shape_yx": [
+    33,
+    33
+  ],
+  "receiver_height_m": 1.0,
+  "components": [
+    "gxx",
+    "gxy",
+    "gxz",
+    "gyy",
+    "gyz",
+    "gzz"
+  ],
+  "g6_shape": [
+    6534,
+    16384
+  ],
+  "g6_dtype": "float32",
+  "g6_path": "artifacts/operators/g6_vinton_4x4x1km_16x32x32_rx33x33_v0003.npy",
+  "g6_sha256": "544d1ceeb63f7da3e83be606e613fb5c3ff6cbe11b7585e1f85c281d71346b0c",
+  "q_path": "artifacts/operators/q_trace_free_basis_v1.npy",
+  "q_sha256": "23396f3ce4f9c05a826be3528ce0a067d4deb0dfcb2a5e6fe52f62c67d8d8eca"
+}

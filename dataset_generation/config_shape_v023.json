@@ -1,0 +1,210 @@
+{
+  "schema_version": "23.1.0",
+  "sample_id_prefix": "v023s",
+  "dataset_id": "V023_SHAPE_AMBIGUITY_PAIRS",
+  "design_document": "docs/DATA.md",
+  "output_directory": "../V023_SHAPE_AMBIGUITY_PAIRS_TRAIN2087",
+  "grid": {
+    "density_shape_zyx": [
+      16,
+      32,
+      32
+    ],
+    "receiver_shape_yx": [
+      33,
+      33
+    ],
+    "cell_size_xyz_m": [
+      125.0,
+      125.0,
+      62.5
+    ],
+    "origin_xyz_m": [
+      0.0,
+      0.0,
+      -1000.0
+    ],
+    "physical_extent_xyz_m": [
+      4000.0,
+      4000.0,
+      1000.0
+    ],
+    "receiver_height_m": 1.0,
+    "subvoxel_supersampling": 4
+  },
+  "operator": {
+    "g6_path": "../operator/g6_vinton_4x4x1km_16x32x32_rx33x33_v0003.npy",
+    "manifest_path": "../operator/operator_vinton_4x4x1km_16x32x32_v0003.json",
+    "g6_sha256": "544d1ceeb63f7da3e83be606e613fb5c3ff6cbe11b7585e1f85c281d71346b0c",
+    "manifest_sha256": "595da517b7559debd8ad0a0716d12400eed097b6e7018f6eb01bacbe59e6bb9e",
+    "component_order": [
+      "Txx",
+      "Txy",
+      "Txz",
+      "Tyy",
+      "Tyz",
+      "Tzz"
+    ]
+  },
+  "splits": {
+    "train": {
+      "ambiguity_pairs": 2087,
+      "seed": 2026091301,
+      "note": "Full-mode generation count of the shape-ambiguity track (together with the distinguishable track's 2088, 4175 pairs merged into V022 train); this run is smoke only"
+    }
+  },
+  "smoke": {
+    "seed": 2026091311,
+    "default_pairs": 150,
+    "maximum_proposals_per_target": 64
+  },
+  "support_fraction_mixture": {
+    "small_0p5_2pct": {
+      "probability": 0.1,
+      "range": [
+        0.005,
+        0.02
+      ]
+    },
+    "main_2_8pct": {
+      "probability": 0.6,
+      "range": [
+        0.02,
+        0.08
+      ]
+    },
+    "large_8_18pct": {
+      "probability": 0.3,
+      "range": [
+        0.08,
+        0.18
+      ]
+    }
+  },
+  "density": {
+    "absolute_contrast_gcc_range": [
+      0.2,
+      0.8
+    ],
+    "positive_probability": 0.5,
+    "support_threshold_abs_gcc": 0.005,
+    "allow_mixed_sign_within_support": false
+  },
+  "geometry_quality": {
+    "minimum_support_cells": 82,
+    "minimum_horizontal_feature_cells": 2,
+    "remove_isolated_components_smaller_than_cells": 4,
+    "maximum_generation_attempts": 120,
+    "lateral_margin_cells": 1,
+    "shallow_margin_cells": 1
+  },
+  "ambiguity": {
+    "metric_version": "absolute_covariance_global_dprime_v019",
+    "gate_type": "shape_tzz_equivalent_v023",
+    "pair_subtype": "ambiguity_shape_tzz_equivalent",
+    "reference_component_sigma_eotvos": [
+      0.425,
+      0.31,
+      0.7,
+      0.425,
+      0.7,
+      0.74
+    ],
+    "reference_sigma_provenance": "Same halved sigma set as config_v023.json (whitening sigma = physical noise-adding sigma, enforced by code checks)",
+    "tzz_dprime_max": 1.0,
+    "spin_dprime_min": 25.0,
+    "density_nrmse_min": 0.12,
+    "shape_jaccard_max": 0.7,
+    "shape_symmetric_difference_min": 0.2,
+    "shape_gate_tier2": {
+      "shape_jaccard_max": 0.8,
+      "shape_symmetric_difference_min": 0.15,
+      "tier1_patience_attempts": 24,
+      "note": "Control tier: the first 24 proposals of a task card accept only the default tier (0.7/0.20); relaxed tiers are allowed afterwards; both sets of numbers are reported"
+    },
+    "tzz_dprime_selection_ceiling": 0.85,
+    "tzz_selection_note": "Within the gate-passing set, prefer scales with tzz d′<=0.85 (avoid the ceiling), and take the largest scale in the set (strongest spin/NRMSE signal)",
+    "dominance_ratio_for_group_label": 1.5,
+    "pair_mechanism_mixture": {
+      "A_analytic": 0.25,
+      "B_structural": 0.25,
+      "C_irregular": 0.25,
+      "D_composite": 0.25
+    },
+    "pair_support_mixture": {
+      "small_0p5_2pct": 0.1,
+      "main_2_8pct": 0.6,
+      "large_8_18pct": 0.3
+    },
+    "prototype_support_range_upper_fraction": 0.2,
+    "prototype_support_note": "Prototypes are generated over the upper 80% interval of each tier, leaving >=82 voxels and same-tier headroom for the endpoints after shape splitting; with 0.2 bias the large tier is (0.10,0.18), which B_structural can reach (a 0.4 bias once caused B_structural to fail 120 attempts within (0.12,0.18))",
+    "support_varying_common_core_erosion_iterations": 1,
+    "direction_construction": "adam_multistart_v023_shape",
+    "direction_note": "Adapted from the V022 v022_optimizer.py copy (v023_shape_optimizer.py): 2000 steps x 4 starting points of Adam, tanh parameterization + kernel-3 avg_pool, loss = -log((e1+e2)/e0) - 8*log(density_energy/e0) + TV; no dominance/balance terms, starting points selected purely by density_energy/e0",
+    "optimization_grid_zyx": [
+      8,
+      16,
+      16
+    ],
+    "local_search_steps": 2000,
+    "optimizer_multistart": 4,
+    "optimizer_learning_rate": 0.08,
+    "optimizer_tv_weight": 0.01,
+    "null_ratio_objective_weight": 3.0,
+    "density_null_objective_weight": 8.0,
+    "direction_smoothing_kernel": 3,
+    "modulation_parameterization": "bounded_tanh",
+    "base_contrast_gcc_range": [
+      0.3,
+      0.55
+    ],
+    "redistribution_amplitude_gcc_range": [
+      0.25,
+      0.35
+    ],
+    "proposal_jitter_fraction": 0.1,
+    "scale_search_min": 0.01,
+    "scale_search_max": 0.8,
+    "scale_search_steps": 160,
+    "scale_selection": "passing_set_max_scale_v023_shape",
+    "maximum_proposals_per_target": 128,
+    "early_exhaustion_attempts": 48,
+    "exhausted_target_policy": "log_and_continue"
+  },
+  "noise": {
+    "type": "white_gaussian_v023",
+    "base_component_sigma_eotvos": [
+      0.425,
+      0.31,
+      0.7,
+      0.425,
+      0.7,
+      0.74
+    ],
+    "amplitude_scale_range": [
+      0.75,
+      1.5
+    ],
+    "frozen_amplitude_scale": 1.0,
+    "frozen_realizations": 5,
+    "pair_noise_is_shared": false,
+    "training_seed": 2026091211,
+    "frozen_evaluation_seeds": {
+      "validation_iid": 2026091212,
+      "test_locked": 2026091213,
+      "smoke": 2026091214
+    },
+    "note": "Shares v023_noise.V023WhiteNoise with the distinguishable track; this section exists only for the whitening/physical sigma consistency check, smoke_shape does not write frozen noise"
+  },
+  "audit": {
+    "forward_regression_relative_l2_max": 2e-06,
+    "independent_prism_relative_l2_max": 2e-05
+  },
+  "storage": {
+    "shard_size": 250,
+    "density_dtype": "float32",
+    "response_dtype": "float32",
+    "save_volume_fraction": true,
+    "save_frozen_observation_for": []
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "scope": "validation_iid (V023)",
+  "n_endpoints_per_split": 2500,
+  "method_seeds": {
+    "s1_full_k1_dual_s1107": "V030 training seed 1107, best.pt, frozen r0",
+    "s0_none_k0_linear_s1107": "V030 training seed 1107, best.pt, frozen r0",
+    "L2_b10": "V026 protocol; no V023 re-calibration",
+    "IRLS_b1": "V026 protocol; no V023 re-calibration"
+  },
+  "selection_rules": {
+    "ordinary_main": "ordinary / main_2_8pct endpoint closest to network s1_full_k1_dual median SAE",
+    "small_volume": "small_0p5_* endpoint closest to classical L2 median SAE",
+    "deep_pair_A": "shape-track ambiguity pair with deepest depth_group and most balanced (A,B) classical-L2 SAE; endpoint A selected (B reported for completeness)"
+  },
+  "examples": [
+    {
+      "row": "ordinary_main",
+      "sample_id": "v023_validation_iid_000115_00de972314",
+      "density_sae_s1_full_k1_dual": 43.93367767333984,
+      "support_subtype": "notched_body"
+    },
+    {
+      "row": "small_volume",
+      "sample_id": "v023_validation_iid_000800_72e34cb2d4",
+      "density_sae_L2_b10": 396.0298767089844,
+      "support_subtype": "wedge"
+    },
+    {
+      "row": "deep_pair_A",
+      "sample_id": "v023_validation_iid_000203_b00b5267c4",
+      "ambiguity_group_id": "validation_iid_small_0p5_2pct_spin1_w40_shape00000_602583f981",
+      "density_sae_L2_b10_A": 381.4599609375,
+      "support_subtype_A": "grf_levelset",
+      "paired_sample_id_B": "v023_validation_iid_000450_27c02340da",
+      "density_sae_L2_b10_B": 381.37200927734375,
+      "support_subtype_B": "grf_levelset"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "method": "IRLS",
+  "selected": {
+    "method": "IRLS",
+    "beta": 0.3,
+    "score": 0.8491266455279489,
+    "converged_fraction": 1.0,
+    "max_relative_kkt": 3.304484180804744e-06,
+    "max_relative_change": 0.0009977398294496163,
+    "elapsed_seconds": 321.4072325231973,
+    "n_endpoints": 12
+  },
+  "grid": [
+    {
+      "method": "IRLS",
+      "beta": 0.1,
+      "score": 0.8839081274916271,
+      "converged_fraction": 1.0,
+      "max_relative_kkt": 9.957571890025802e-07,
+      "max_relative_change": 0.0,
+      "elapsed_seconds": 842.5395762489643,
+      "n_endpoints": 12
+    },
+    {
+      "method": "IRLS",
+      "beta": 0.3,
+      "score": 0.8491266455279489,
+      "converged_fraction": 1.0,
+      "max_relative_kkt": 3.304484180804744e-06,
+      "max_relative_change": 0.0009977398294496163,
+      "elapsed_seconds": 321.4072325231973,
+      "n_endpoints": 12
+    },
+    {
+      "method": "IRLS",
+      "beta": 1.0,
+      "score": 0.8794439675300327,
+      "converged_fraction": 1.0,
+      "max_relative_kkt": 9.84831905517894e-06,
+      "max_relative_change": 0.0009961333823232893,
+      "elapsed_seconds": 165.35889985994436,
+      "n_endpoints": 12
+    },
+    {
+      "method": "IRLS",
+      "beta": 3.0,
+      "score": 1.007075520318184,
+      "converged_fraction": 0.75,
+      "max_relative_kkt": 1.4444006095522623e-05,
+      "max_relative_change": 0.0009948807875306705,
+      "elapsed_seconds": 144.4180528568104,
+      "n_endpoints": 12
+    },
+    {
+      "method": "IRLS",
+      "beta": 10.0,
+      "score": 1.0687839496832365,
+      "converged_fraction": 0.5833333333333334,
+      "max_relative_kkt": 6.089388094954017e-05,
+      "max_relative_change": 0.0009995644596765734,
+      "elapsed_seconds": 99.33550067502074,
+      "n_endpoints": 12
+    }
+  ],
+  "beta_grid": [
+    0.1,
+    0.3,
+    1.0,
+    3.0,
+    10.0
+  ],
+  "calibration_split": "train",
+  "calibration_indices": [
+    935,
+    2869,
+    4181,
+    5102,
+    5732,
+    8067,
+    11289,
+    12836,
+    18674,
+    20943,
+    21714,
+    22263
+  ],
+  "solver": {
+    "max_iterations": 6000,
+    "tolerance": 1e-05,
+    "max_outer": 80,
+    "outer_tolerance": 0.001,
+    "epsilon": 0.01,
+    "smoothness": 1.0
+  },
+  "selection_score": "mean(foreground_nrmse + background_nrmse) over 12 current-V023 train endpoints",
+  "selection_requires_all_endpoints_converged": true
+}

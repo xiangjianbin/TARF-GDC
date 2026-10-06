@@ -1,0 +1,61 @@
+{
+  "adjoint_relative_error_role": 6.283067364165618e-07,
+  "adjoint_relative_error_tzz": 1.5192925957308034e-06,
+  "backprojection_quantile": 0.995,
+  "backprojection_sample_count": 256,
+  "backprojection_sample_seed": 20262012,
+  "backprojection_scale_role": 57.82338703054486,
+  "backprojection_scale_tzz": 28.893917040415488,
+  "density_shape": [
+    16,
+    32,
+    32
+  ],
+  "elapsed_seconds": 39.79,
+  "g6_path": "ARCHIVED_SOURCE/论文/数据集_V023/operator/g6_vinton_4x4x1km_16x32x32_rx33x33_v0003.npy",
+  "g6_sha256": "544d1ceeb63f7da3e83be606e613fb5c3ff6cbe11b7585e1f85c281d71346b0c",
+  "normalization_sha256": "572eef2d1e4ea5b00304aa5b535ed5c9e455da58e32e0dfbceb943eb946c34c7",
+  "receiver_shape": [
+    33,
+    33
+  ],
+  "sensitivity_floor_fraction": 0.001,
+  "sensitivity_role_sha256": "0800691abbcb28cbfa35418f12cb96affc5049f11943704791e6ca80b2bab37c",
+  "sensitivity_tzz_sha256": "d75621dadaae6b3dd805ffdf69ed35ddae05a7adba9043a145ee47fc2d09bbd0",
+  "status": "PASS",
+  "tik": {
+    "roles": {
+      "absolute_lambda": 1.3396010569832706,
+      "elapsed_seconds": 32.33,
+      "input_layout": "channel_major: normalized (C,33,33).flatten(); C=1 raw Tzz or C=5 q,Txz,Tyz,u,Txy",
+      "layout_relative_error": 5.115735940583292e-16,
+      "normalization_sha256": "572eef2d1e4ea5b00304aa5b535ed5c9e455da58e32e0dfbceb943eb946c34c7",
+      "path": "ARCHIVED_SOURCE/论文/V027_V023统一损失与Zhou模块终审实验_20260913/artifacts/tik_pinv_roles_lambda0.01.npy",
+      "primal_normal_equation_relative_residual_float64": 1.1293198940599742e-12,
+      "regularization_definition": "lambda_abs=0.01*mean(diag(A.T@A)); P=A.T@(A@A.T+lambda_abs*I)^-1",
+      "relative_lambda": 0.01,
+      "sha256": "b3e7389e0fa04076980336dd9f0a1a7889baea66ddd17ec6edc64235292766b1",
+      "shape": [
+        16384,
+        5445
+      ]
+    },
+    "tzz": {
+      "absolute_lambda": 0.008011827731741958,
+      "elapsed_seconds": 3.31,
+      "input_layout": "channel_major: normalized (C,33,33).flatten(); C=1 raw Tzz or C=5 q,Txz,Tyz,u,Txy",
+      "layout_relative_error": 2.1976586966770556e-08,
+      "normalization_sha256": "572eef2d1e4ea5b00304aa5b535ed5c9e455da58e32e0dfbceb943eb946c34c7",
+      "path": "ARCHIVED_SOURCE/论文/V027_V023统一损失与Zhou模块终审实验_20260913/artifacts/tik_pinv_tzz_lambda0.01.npy",
+      "primal_normal_equation_relative_residual_float64": 1.1550087271156052e-13,
+      "regularization_definition": "lambda_abs=0.01*mean(diag(A.T@A)); P=A.T@(A@A.T+lambda_abs*I)^-1",
+      "relative_lambda": 0.01,
+      "sha256": "5672c29c1a7769b7ea4a81ced07acbbc35e18f98c8baa8008bdeda919ebf1208",
+      "shape": [
+        16384,
+        1089
+      ]
+    }
+  },
+  "z_storage_order": "deep_to_shallow; depth_m=(15.5-index)*62.5"
+}

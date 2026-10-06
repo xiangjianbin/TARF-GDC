@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "TARF-GDC: three-dimensional density-contrast inversion from full-tensor gravity gradients"
+authors:
+  - family-names: Xiang
+    given-names: Jianbin
+    affiliation: "National Institute of Natural Hazards, Ministry of Emergency Management of China"
+  - family-names: Wang
+    given-names: Xin
+    affiliation: "National Institute of Natural Hazards, Ministry of Emergency Management of China"
+  - family-names: Hu
+    given-names: Xingping
+    affiliation: "National Institute of Natural Hazards, Ministry of Emergency Management of China"
+  - family-names: Xu
+    given-names: Yuchen
+    affiliation: "National Institute of Natural Hazards, Ministry of Emergency Management of China"
+year: 2026
+license: MIT
+repository-code: "https://github.com/xiangjianbin/TARF-GDC"
+# doi: TODO — add the archiving DOI (e.g. Zenodo) here after the release is archived.
+# Also cite the accompanying Computers & Geosciences manuscript once its DOI is available.

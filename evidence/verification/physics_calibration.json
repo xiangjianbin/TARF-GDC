@@ -1,0 +1,26 @@
+{
+  "expected": 1.9504151332365432e-07,
+  "passed": true,
+  "physics_weight": 1.9504151332365432e-07,
+  "records": [
+    {
+      "label_relative_error": 2.3355491407528461e-07,
+      "proposed_weight": 2.183467319993543e-07
+    },
+    {
+      "label_relative_error": 1.6235881616921688e-07,
+      "proposed_weight": 2.0337070399091876e-07
+    },
+    {
+      "label_relative_error": 1.752672318389159e-07,
+      "proposed_weight": 1.715172726971346e-07
+    },
+    {
+      "label_relative_error": 1.7970027954561374e-07,
+      "proposed_weight": 1.8671232265638988e-07
+    }
+  ],
+  "samples": 32,
+  "split": "train",
+  "validation_or_test_used": false
+}

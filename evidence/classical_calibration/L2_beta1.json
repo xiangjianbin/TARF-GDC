@@ -1,0 +1,10 @@
+{
+  "method": "L2",
+  "beta": 1.0,
+  "score": 0.912130990285052,
+  "converged_fraction": 1.0,
+  "max_relative_kkt": 9.259246889718998e-06,
+  "max_relative_change": 0.0,
+  "elapsed_seconds": 35.47991794091649,
+  "n_endpoints": 12
+}

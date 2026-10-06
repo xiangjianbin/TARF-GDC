@@ -1,0 +1,139 @@
+{
+  "passed": true,
+  "routes": [
+    {
+      "model": "1101_s1107_smoke",
+      "epochs": 1,
+      "completed": true,
+      "smoke_only": true,
+      "best_epoch": 1,
+      "stage1": {
+        "backbone_eval_mode": true,
+        "checkpoint": "LOCAL_RELEASE/TARF-GDC-assets/checkpoints/1001_s1107.pt",
+        "checkpoint_sha256": "efd074a8af99ed24d74da75e210745ce388c0342a4d34ccda0b7344d369aaed8",
+        "epoch_zero_candidate": true,
+        "freeze_backbone": true,
+        "frozen_state_sha256": "a4f68fa06983a5c511416c021e4298334c50e6f325a5a96f66963637c0770023",
+        "source_code": "1001",
+        "source_epoch": 18,
+        "stage1_training_epochs": 50,
+        "stage2_training_epochs": 50,
+        "total_parameters": 6046135,
+        "trainable_parameters": 58849
+      }
+    },
+    {
+      "model": "0001C_s1107_smoke",
+      "epochs": 1,
+      "completed": true,
+      "smoke_only": true,
+      "best_epoch": 0,
+      "stage1": {
+        "backbone_eval_mode": false,
+        "checkpoint": "LOCAL_RELEASE/TARF-GDC-assets/checkpoints/0001_s1107.pt",
+        "checkpoint_sha256": "3c5f458333d37aa9bbefadc0070d758121883b594b8cdb00eed5e9a77634a1ed",
+        "epoch_zero_candidate": true,
+        "freeze_backbone": false,
+        "frozen_state_sha256": "dad2dd6e1f6b62885ed71c0109bd17689f0e5cfe7a5cac68a820f16b25ce2f75",
+        "source_code": "0001",
+        "source_epoch": 27,
+        "stage1_training_epochs": 50,
+        "stage2_training_epochs": 50,
+        "total_parameters": 5988189,
+        "trainable_parameters": 5988189
+      }
+    },
+    {
+      "model": "0001_s1107_smoke",
+      "epochs": 1,
+      "completed": true,
+      "smoke_only": true,
+      "best_epoch": 1
+    },
+    {
+      "model": "0101_s1107_smoke",
+      "epochs": 1,
+      "completed": true,
+      "smoke_only": true,
+      "best_epoch": 0,
+      "stage1": {
+        "backbone_eval_mode": true,
+        "checkpoint": "LOCAL_RELEASE/TARF-GDC-assets/checkpoints/0001_s1107.pt",
+        "checkpoint_sha256": "3c5f458333d37aa9bbefadc0070d758121883b594b8cdb00eed5e9a77634a1ed",
+        "epoch_zero_candidate": true,
+        "freeze_backbone": true,
+        "frozen_state_sha256": "dad2dd6e1f6b62885ed71c0109bd17689f0e5cfe7a5cac68a820f16b25ce2f75",
+        "source_code": "0001",
+        "source_epoch": 27,
+        "stage1_training_epochs": 50,
+        "stage2_training_epochs": 50,
+        "total_parameters": 6047038,
+        "trainable_parameters": 58849
+      }
+    },
+    {
+      "model": "1001C_s1107_smoke",
+      "epochs": 1,
+      "completed": true,
+      "smoke_only": true,
+      "best_epoch": 0,
+      "stage1": {
+        "backbone_eval_mode": false,
+        "checkpoint": "LOCAL_RELEASE/TARF-GDC-assets/checkpoints/1001_s1107.pt",
+        "checkpoint_sha256": "efd074a8af99ed24d74da75e210745ce388c0342a4d34ccda0b7344d369aaed8",
+        "epoch_zero_candidate": true,
+        "freeze_backbone": false,
+        "frozen_state_sha256": "a4f68fa06983a5c511416c021e4298334c50e6f325a5a96f66963637c0770023",
+        "source_code": "1001",
+        "source_epoch": 18,
+        "stage1_training_epochs": 50,
+        "stage2_training_epochs": 50,
+        "total_parameters": 5987286,
+        "trainable_parameters": 5987286
+      }
+    },
+    {
+      "model": "1001_s1107_smoke",
+      "epochs": 1,
+      "completed": true,
+      "smoke_only": true,
+      "best_epoch": 1
+    },
+    {
+      "model": "B0P_s1107_smoke",
+      "epochs": 1,
+      "completed": true,
+      "smoke_only": true,
+      "best_epoch": 1
+    },
+    {
+      "model": "Obs-only_s1107_smoke",
+      "epochs": 1,
+      "completed": true,
+      "smoke_only": true,
+      "best_epoch": 0,
+      "stage1": {
+        "backbone_eval_mode": true,
+        "checkpoint": "LOCAL_RELEASE/TARF-GDC-assets/checkpoints/1001_s1107.pt",
+        "checkpoint_sha256": "efd074a8af99ed24d74da75e210745ce388c0342a4d34ccda0b7344d369aaed8",
+        "epoch_zero_candidate": true,
+        "freeze_backbone": true,
+        "frozen_state_sha256": "a4f68fa06983a5c511416c021e4298334c50e6f325a5a96f66963637c0770023",
+        "source_code": "1001",
+        "source_epoch": 18,
+        "stage1_training_epochs": 50,
+        "stage2_training_epochs": 50,
+        "total_parameters": 6046135,
+        "trainable_parameters": 58849
+      }
+    },
+    {
+      "model": "T0P_s1107_smoke",
+      "epochs": 1,
+      "completed": true,
+      "smoke_only": true,
+      "best_epoch": 1
+    }
+  ],
+  "full_training_reexecuted": false
+}

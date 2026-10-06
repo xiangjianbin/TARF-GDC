@@ -1,0 +1,61 @@
+{
+  "dataset_id": "V023_DISTINGUISHABLE_PAIRS",
+  "used_seeds": {
+    "splits": {
+      "train": 2026091201,
+      "validation_iid": 2026091202,
+      "test_locked": 2026091203
+    },
+    "noise": {
+      "training": 2026091211,
+      "frozen_evaluation": {
+        "validation_iid": 2026091212,
+        "test_locked": 2026091213,
+        "smoke": 2026091214
+      }
+    },
+    "smoke": 2026091299,
+    "shape_track": {
+      "train": 2026091301,
+      "smoke": 2026091311
+    },
+    "shape_workers_parallel": {
+      "w0": 2026091401,
+      "w1": 2026092401,
+      "w2": 2026093401,
+      "w3": 2026094401,
+      "w4": 2026095401,
+      "w5": 2026096401,
+      "merge_shuffle": 2026091471
+    },
+    "shape_topup_workers": {
+      "train_w0_w5": "2026091521+w*1000",
+      "validation_w0_w5": "2026091531+w*1000",
+      "test_w0_w5": "2026091541+w*1000"
+    },
+    "shape_deficit_workers": {
+      "validation_w3_w5": "2026091551+w*1000",
+      "validation_w6_cushion": "2026091561, 2026091581",
+      "train_w6_w11": "2026091591+w*1000",
+      "test_w6_w11": "2026091621+w*1000"
+    },
+    "ordinary": {
+      "train": 2026091501,
+      "validation_iid": 2026091502,
+      "test_locked": 2026091503
+    },
+    "separable_topup": {
+      "train": 2026091511,
+      "validation_iid": 2026091512,
+      "test_locked": 2026091513
+    },
+    "final_assembly": {
+      "train": 2026091601,
+      "validation_iid": 2026091602,
+      "test_locked": 2026091603,
+      "shuffle_base": 2026091571
+    }
+  },
+  "reserved_seeds_do_not_use": [],
+  "notes": "All V023 seeds (the 20260912xx/20260913xx/20260914xx ranges) have zero overlap with V022 (the 20260825xx~20260827xx range), V021 and earlier datasets; test_locked reuses the frozen V022 products, and 2026091203/2026091213 in this registry are placeholders guarding against future misuse only. Separable track: split 2026091201~03, noise 2026091211~13, smoke freeze 2026091214, smoke generation 2026091299; shape-ambiguity track: train 2026091301 (single-process plan, switched to parallel before use), smoke 2026091311, parallel workers 2026091401+w*1000 (w0..w5), merge shuffle 2026091471. Every build writes a snapshot of this registry as seed_registry.json in the output directory."
+}

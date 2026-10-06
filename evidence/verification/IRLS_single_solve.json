@@ -1,0 +1,24 @@
+{
+  "calibration": false,
+  "diagnostic_only": true,
+  "irls_historical_warm_start": true,
+  "method": "IRLS",
+  "protocol": {
+    "epsilon": 0.01,
+    "max_iterations": 6000,
+    "max_outer": 80,
+    "outer_tolerance": 0.001,
+    "smoothness": 1.0,
+    "tolerance": 1e-05
+  },
+  "results": [
+    {
+      "beta": 0.3,
+      "converged": true,
+      "elapsed_seconds": 26.858363389968872,
+      "score": 0.9941322803497314
+    }
+  ],
+  "samples": 1,
+  "selected_beta": 0.3
+}

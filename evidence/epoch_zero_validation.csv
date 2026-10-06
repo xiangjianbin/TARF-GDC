@@ -1,0 +1,13 @@
+code,seed,epoch,validation_sae,source
+0101,1107,0,132.575119019,ARCHIVED_SOURCE/论文/computer and geosciences整理/论文/两阶段冻结初始解_支持域门控修正_20260928/runs/staged_sg_0101_s1107/epoch_zero.json
+0101,1108,0,131.566070557,ARCHIVED_SOURCE/论文/computer and geosciences整理/论文/TARF与门控修正_续训对照与三种子验证_20260929/runs/supplement_0101_s1108/epoch_zero.json
+0101,1109,0,119.425415039,ARCHIVED_SOURCE/论文/computer and geosciences整理/论文/TARF与门控修正_续训对照与三种子验证_20260929/runs/supplement_0101_s1109/epoch_zero.json
+1101,1107,0,101.447166443,ARCHIVED_SOURCE/论文/computer and geosciences整理/论文/两阶段冻结初始解_支持域门控修正_20260928/runs/staged_sg_1101_s1107/epoch_zero.json
+1101,1108,0,112.355773926,ARCHIVED_SOURCE/论文/computer and geosciences整理/论文/TARF与门控修正_续训对照与三种子验证_20260929/runs/supplement_1101_s1108/epoch_zero.json
+1101,1109,0,106.39289856,ARCHIVED_SOURCE/论文/computer and geosciences整理/论文/TARF与门控修正_续训对照与三种子验证_20260929/runs/supplement_1101_s1109/epoch_zero.json
+0001C,1107,0,132.575119019,ARCHIVED_SOURCE/论文/computer and geosciences整理/论文/TARF与门控修正_续训对照与三种子验证_20260929/runs/supplement_0001C_s1107/epoch_zero.json
+0001C,1108,0,131.566070557,ARCHIVED_SOURCE/论文/computer and geosciences整理/论文/TARF与门控修正_续训对照与三种子验证_20260929/runs/supplement_0001C_s1108/epoch_zero.json
+0001C,1109,0,119.425415039,ARCHIVED_SOURCE/论文/computer and geosciences整理/论文/TARF与门控修正_续训对照与三种子验证_20260929/runs/supplement_0001C_s1109/epoch_zero.json
+1001C,1107,0,101.447166443,ARCHIVED_SOURCE/论文/computer and geosciences整理/论文/TARF与门控修正_续训对照与三种子验证_20260929/runs/supplement_1001C_s1107/epoch_zero.json
+1001C,1108,0,112.355773926,ARCHIVED_SOURCE/论文/computer and geosciences整理/论文/TARF与门控修正_续训对照与三种子验证_20260929/runs/supplement_1001C_s1108/epoch_zero.json
+1001C,1109,0,106.39289856,ARCHIVED_SOURCE/论文/computer and geosciences整理/论文/TARF与门控修正_续训对照与三种子验证_20260929/runs/supplement_1001C_s1109/epoch_zero.json
