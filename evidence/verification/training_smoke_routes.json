@@ -10,7 +10,7 @@
       "stage1": {
         "backbone_eval_mode": true,
         "checkpoint": "LOCAL_RELEASE/TARF-GDC-assets/checkpoints/1001_s1107.pt",
-        "checkpoint_sha256": "efd074a8af99ed24d74da75e210745ce388c0342a4d34ccda0b7344d369aaed8",
+        "checkpoint_sha256": "f89e0a2a3c84c0bc50fabbf66c4c43ad99435514340af8ecd6cfcf49cdf09185",
         "epoch_zero_candidate": true,
         "freeze_backbone": true,
         "frozen_state_sha256": "a4f68fa06983a5c511416c021e4298334c50e6f325a5a96f66963637c0770023",
@@ -31,7 +31,7 @@
       "stage1": {
         "backbone_eval_mode": false,
         "checkpoint": "LOCAL_RELEASE/TARF-GDC-assets/checkpoints/0001_s1107.pt",
-        "checkpoint_sha256": "3c5f458333d37aa9bbefadc0070d758121883b594b8cdb00eed5e9a77634a1ed",
+        "checkpoint_sha256": "00adb901dbbd4d0b75e3f7df3a8cab17cda95586e809d7ee42e733ca0f13ad50",
         "epoch_zero_candidate": true,
         "freeze_backbone": false,
         "frozen_state_sha256": "dad2dd6e1f6b62885ed71c0109bd17689f0e5cfe7a5cac68a820f16b25ce2f75",
@@ -59,7 +59,7 @@
       "stage1": {
         "backbone_eval_mode": true,
         "checkpoint": "LOCAL_RELEASE/TARF-GDC-assets/checkpoints/0001_s1107.pt",
-        "checkpoint_sha256": "3c5f458333d37aa9bbefadc0070d758121883b594b8cdb00eed5e9a77634a1ed",
+        "checkpoint_sha256": "00adb901dbbd4d0b75e3f7df3a8cab17cda95586e809d7ee42e733ca0f13ad50",
         "epoch_zero_candidate": true,
         "freeze_backbone": true,
         "frozen_state_sha256": "dad2dd6e1f6b62885ed71c0109bd17689f0e5cfe7a5cac68a820f16b25ce2f75",
@@ -80,7 +80,7 @@
       "stage1": {
         "backbone_eval_mode": false,
         "checkpoint": "LOCAL_RELEASE/TARF-GDC-assets/checkpoints/1001_s1107.pt",
-        "checkpoint_sha256": "efd074a8af99ed24d74da75e210745ce388c0342a4d34ccda0b7344d369aaed8",
+        "checkpoint_sha256": "f89e0a2a3c84c0bc50fabbf66c4c43ad99435514340af8ecd6cfcf49cdf09185",
         "epoch_zero_candidate": true,
         "freeze_backbone": false,
         "frozen_state_sha256": "a4f68fa06983a5c511416c021e4298334c50e6f325a5a96f66963637c0770023",
@@ -115,7 +115,7 @@
       "stage1": {
         "backbone_eval_mode": true,
         "checkpoint": "LOCAL_RELEASE/TARF-GDC-assets/checkpoints/1001_s1107.pt",
-        "checkpoint_sha256": "efd074a8af99ed24d74da75e210745ce388c0342a4d34ccda0b7344d369aaed8",
+        "checkpoint_sha256": "f89e0a2a3c84c0bc50fabbf66c4c43ad99435514340af8ecd6cfcf49cdf09185",
         "epoch_zero_candidate": true,
         "freeze_backbone": true,
         "frozen_state_sha256": "a4f68fa06983a5c511416c021e4298334c50e6f325a5a96f66963637c0770023",

@@ -23,7 +23,7 @@ figure_data/             synthetic figure sources and explicitly labelled legacy
 
 Training noise is deterministically regenerated from sample ID and epoch, with amplitude scale uniformly sampled from [0.75,1.5]. Validation/test have five stored independent-white-noise realizations; component sigmas are (0.425,0.31,0.70,0.425,0.70,0.74) E and evaluation amplitude scale is 1. The two endpoints of a pair have independent noise. The support threshold for evaluation is 0.005 g/cm³. The 0.05 g/cm³ display threshold in Figures 8/9 is not an evaluation-mask change.
 
-Synthetic freeze: 170 hashed files, approximately 6.69 GB decimal. SHA256 of `dataset/SHA256SUMS`: `75f2d230b211897ecf154ec3f6bc00592425835a6e26a505914eae19afc2c26e`. G6 SHA256: `544d1ceeb63f7da3e83be606e613fb5c3ff6cbe11b7585e1f85c281d71346b0c`. Checkpoint hashes are in `assets/model_registry.json`.
+Synthetic freeze: 170 hashed files, approximately 6.69 GB decimal. SHA256 of `dataset/SHA256SUMS`: `33004e5d73c610cbc529a8615352407a6b8f1f3771ebd436357770a89b70fbfd`. G6 SHA256: `544d1ceeb63f7da3e83be606e613fb5c3ff6cbe11b7585e1f85c281d71346b0c`. Checkpoint hashes are in `assets/model_registry.json`.
 
 The trained model weights are planned for public release on Zenodo. The record DOI, version, included checkpoint list and license will be added here after the deposit is published. Until a live record is linked, the weights are not represented as publicly downloadable. The frozen synthetic dataset and forward operator are also stored outside this source-code repository; no public download location is currently asserted for them.
 

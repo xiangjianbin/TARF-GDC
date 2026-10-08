@@ -26,7 +26,7 @@ from v024_inversion.utils import sha256_file, write_json
 
 ROOT = Path(__file__).resolve().parents[1]
 DATASET = None  # The public CLI always supplies the asset directory.
-EXPECTED_SUMS = "75f2d230b211897ecf154ec3f6bc00592425835a6e26a505914eae19afc2c26e"
+EXPECTED_SUMS = "33004e5d73c610cbc529a8615352407a6b8f1f3771ebd436357770a89b70fbfd"
 EXPECTED_G6 = "544d1ceeb63f7da3e83be606e613fb5c3ff6cbe11b7585e1f85c281d71346b0c"
 G6_NAME = "g6_vinton_4x4x1km_16x32x32_rx33x33_v0003.npy"
 SHAPES = {"density_zyx": (16, 32, 32), "clean_d6": (6, 33, 33),
@@ -312,5 +312,4 @@ def prepare_operators(dataset: Path, artifacts: Path) -> dict:
     write_json(artifacts / "operator_audit.json", report)
     note(f"operator and tik preparation PASS in {report['elapsed_seconds']}s")
     return report
-
 
