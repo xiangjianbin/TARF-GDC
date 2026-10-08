@@ -22,7 +22,7 @@ Verification was performed in the recorded Python 3.8.10 / PyTorch 2.4.1 CUDA en
 
 Not performed: training all 27 models for their full 50/100-epoch schedules; complete validation/test reruns for every seed; re-solving all 200 classical models; byte-identical regeneration of the multi-stage synthetic dataset; installation in a fresh OS/container; public hosting or GitHub upload. These are not implied by a successful smoke test.
 
-The code tree was also copied to a standalone ASCII-named temporary directory. Its data-independent CPU demo and paper-table checks passed there using the installed environment; this is a path-portability check, not a fresh dependency installation. The manuscript changed during preparation. Its final fingerprint, current printed-table checks, figure links and comparison with an existing manuscript snapshot are recorded in `evidence/verification/manuscript_recheck.json`; the original initial fingerprint remains in `evidence/manuscript_identity.json`.
+The code tree was also copied to a standalone ASCII-named temporary directory. Its data-independent CPU demo and paper-table checks passed there using the installed environment; this is a path-portability check, not a fresh dependency installation.
 
 Exact replay of historical weights and exact retraining are different claims. CUDA kernels, device architecture, driver and dependency changes can alter trajectories. The code preserves the original BF16/FP32 boundaries, seeds, deterministic resize and data/noise contracts; historical hashes and numerical references allow differences to be detected.
 

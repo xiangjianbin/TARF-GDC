@@ -58,7 +58,6 @@ Use CUDA/BF16 for the historical prediction comparison. For a CUDA installation,
 - [Data and generation](docs/DATA.md): schema, units, seeds, noise, hashes, asset availability and historical staging.
 - [Manuscript coverage](docs/EXPERIMENT_MAP.md): every experimental section and Figures 1–14.
 - [Verification scope](docs/VERIFICATION.md): what was executed, what was compared, and what was not rerun.
-- [Publication checklist](docs/PUBLICATION_CHECKLIST.md): current license, attribution and external-asset release status.
 
 Run commands from this repository root. Never point output arguments into the frozen asset directory. Keep original checkpoints and datasets unchanged. Historical checkpoints contain Python metadata: deserialize only trusted, hash-verified files. This repository does not download or execute arbitrary checkpoints.
 

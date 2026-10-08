@@ -1,6 +1,6 @@
 # Manuscript-to-code coverage
 
-The selected Chinese manuscript is identified by SHA256 in `evidence/manuscript_identity.json`. This mapping follows that revision, not earlier numbering, earlier `Full` models, or later exploratory field corrections. No manuscript text was edited during this release preparation.
+This mapping follows the manuscript revision used for this release, not earlier numbering, earlier `Full` models, or later exploratory field corrections. No manuscript text was edited during this release preparation.
 
 ## Experimental evidence
 
