@@ -6,25 +6,16 @@ Resolved for this release:
 
 - **License:** the code tree is released under the MIT License; see [LICENSE](../LICENSE). Software, model-weight, synthetic-data and third-party field-data permissions remain distinct: the MIT license covers this code tree only.
 - **Repository:** <https://github.com/xiangjianbin/TARF-GDC> (public). First public release year: 2026. Upload **only this `TARF-GDC` directory**, not its parent research/submission folder.
-- **Citation metadata:** [CITATION.cff](../CITATION.cff) records the software title, authors, year, license and repository URL; add the archive DOI there once minted.
+- **Contact:** Jianbin Xiang (<xiangjianbin25@mails.ucas.ac.cn>).
+- **Citation metadata:** [CITATION.cff](../CITATION.cff) records the software title, authors, year, license, contact email and repository URL. A weights-only Zenodo DOI belongs in the data documentation, not in the software DOI field.
 - **Comments/docstrings:** English throughout the Python tree; this is enforced by `tests/test_release.py::test_all_comments_and_docstrings_english`.
 
 Still required from the authors (outside this code tree):
 
-- Host synthetic data, G6, 27 checkpoints and required source arrays separately; preserve their directory layout and hashes. Add actual versioned download links/DOI and an asset license to the README/data guide. Do not put an 8+ GB research archive into ordinary Git history.
-- Do not upload the separately isolated `PRIVATE_Vinton_DO_NOT_UPLOAD` directory until Vinton source/permission/redistribution conditions are confirmed. It is outside both the code tree and the distributable asset bundle. If redistribution is prohibited, provide truthful access instructions and retain the runnable synthetic example.
-- Replace the manuscript's code/data availability placeholders with the released URL/version/license, and resolve the dangling field-geometry Table 9 reference.
+- Publish the planned Zenodo record for the trained weights. Record its DOI, version, included checkpoints and license in the README and data guide after the record is live; do not describe the weights as publicly available before then.
+- Decide how the frozen synthetic dataset and G6 will be made available. Preserve their directory layout and hashes. If an asset cannot be shared, document the specific reason and provide a runnable alternative where possible. Do not put the 8+ GB research archive into ordinary Git history.
+- Do not upload the restricted Vinton working directory until its source, permission and redistribution conditions are confirmed. It is outside both the code tree and the distributable synthetic asset bundle. If redistribution is prohibited, provide truthful source and access instructions and retain the runnable synthetic example.
+- Update the manuscript's data and code statements after the Zenodo DOI and the dataset/operator access decision are final, and resolve the dangling field-geometry Table 9 reference.
 - Test the downloaded release in a new environment before representing it as independently installed/reproduced.
-
-Local upload preparation:
-
-```bash
-git init
-git add README.md LICENSE CITATION.cff requirements.txt requirements-operator.txt .gitignore SHA256SUMS reproduce.py code configs assets dataset_generation scripts tests figures docs evidence
-git status --short
-git diff --cached --stat
-```
-
-Then create the commit and connect the author's remote.
 
 Original research and process archives remain outside the code tree. They are recoverable, but may contain obsolete paths, incomplete runs, intermediate claims or private metadata; they should not be uploaded wholesale.

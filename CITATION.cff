@@ -4,6 +4,7 @@ title: "TARF-GDC: three-dimensional density-contrast inversion from full-tensor 
 authors:
   - family-names: Xiang
     given-names: Jianbin
+    email: "xiangjianbin25@mails.ucas.ac.cn"
     affiliation: "National Institute of Natural Hazards, Ministry of Emergency Management of China"
   - family-names: Wang
     given-names: Xin
@@ -17,5 +18,6 @@ authors:
 year: 2026
 license: MIT
 repository-code: "https://github.com/xiangjianbin/TARF-GDC"
-# doi: TODO — add the archiving DOI (e.g. Zenodo) here after the release is archived.
+# Add a software-archive DOI here only if this source-code release is archived.
+# A Zenodo record containing model weights only is an asset citation, not the software DOI.
 # Also cite the accompanying Computers & Geosciences manuscript once its DOI is available.

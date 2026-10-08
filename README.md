@@ -2,15 +2,19 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-Reproducibility candidate for three-dimensional density-contrast inversion from full-tensor gravity gradients, using tensor-role fusion (TARF) and gated density correction (GDC).
+Reproducibility candidate for three-dimensional density-contrast inversion from full-tensor gravity gradients, using Tensor-Aware Role Fusion (TARF) and Gated Density Correction (GDC).
 
-This release implements the frozen-initial-network, one-step GDC manuscript version. It is **not** an earlier model called `Full`. The release contains nine configurations, three training seeds, dataset-generation code, training/evaluation, classical inversion, field preprocessing, figure sources and verification tests.
+This release implements the frozen-initial-network, one-step GDC manuscript version. It is **not** an earlier model called `Full`. The release contains nine configurations, three training seeds, dataset-generation code, training/evaluation, classical inversion, field preprocessing, figure-generation code and verification tests.
 
-**Publication status:** public release accompanying the Computers & Geosciences manuscript "TARF-GDC: three-dimensional density-contrast inversion from full-tensor gravity gradients". Repository: <https://github.com/xiangjianbin/TARF-GDC>. First public release: 2026. The asset bundle (frozen dataset, forward operator, checkpoints) is distributed separately; see [docs/DATA.md](docs/DATA.md) and the [publication checklist](docs/PUBLICATION_CHECKLIST.md).
+**Publication status:** public release accompanying the Computers & Geosciences manuscript "TARF-GDC: three-dimensional density-contrast inversion from full-tensor gravity gradients". Repository: <https://github.com/xiangjianbin/TARF-GDC>. First public release: 2026. The frozen dataset, forward operator, trained weights and supporting source arrays are maintained separately from the code. The trained model weights are planned for public release on Zenodo. The record DOI, version, included checkpoints and license will be added after the deposit is published; until then, this repository does not claim that the weights are publicly downloadable. See [docs/DATA.md](docs/DATA.md) for the current asset status.
+
+## Contact
+
+Repository and software enquiries: Jianbin Xiang (<xiangjianbin25@mails.ucas.ac.cn>).
 
 ## License
 
-This code is released under the [MIT License](LICENSE). Copyright (c) 2026 Jianbin Xiang, Xin Wang, Xingping Hu, Yuchen Xu (National Institute of Natural Hazards, Ministry of Emergency Management of China). The separately distributed data/checkpoint assets and any third-party field data are **not** covered by this license; their terms are described in [docs/DATA.md](docs/DATA.md).
+This code is released under the [MIT License](LICENSE). Copyright (c) 2026 Jianbin Xiang, Xin Wang, Xingping Hu, Yuchen Xu (National Institute of Natural Hazards, Ministry of Emergency Management of China). The separately maintained data, model weights and third-party field data are **not** covered by this license; their terms are described in [docs/DATA.md](docs/DATA.md).
 
 ## Citation
 
@@ -31,7 +35,7 @@ python -m pytest tests -q
 
 The demo generates an analytical prism example, adds reproducible noise, performs one optimization step and checks a checkpoint round trip. It requires no downloaded data, operator or pretrained weights. It is a diagnostic example, **not a reproduction of the paper's accuracy**. Results are written to a new output directory.
 
-## Reproduce the paper
+## Reproduce the paper with the external assets
 
 Place the separately distributed asset bundle beside this repository:
 
@@ -54,7 +58,7 @@ Use CUDA/BF16 for the historical prediction comparison. For a CUDA installation,
 - [Data and generation](docs/DATA.md): schema, units, seeds, noise, hashes, asset availability and historical staging.
 - [Manuscript coverage](docs/EXPERIMENT_MAP.md): every experimental section and Figures 1–14.
 - [Verification scope](docs/VERIFICATION.md): what was executed, what was compared, and what was not rerun.
-- [Publication checklist](docs/PUBLICATION_CHECKLIST.md): license, attribution, hosting and safe GitHub upload.
+- [Publication checklist](docs/PUBLICATION_CHECKLIST.md): current license, attribution and external-asset release status.
 
 Run commands from this repository root. Never point output arguments into the frozen asset directory. Keep original checkpoints and datasets unchanged. Historical checkpoints contain Python metadata: deserialize only trusted, hash-verified files. This repository does not download or execute arbitrary checkpoints.
 
