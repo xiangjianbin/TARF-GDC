@@ -105,7 +105,7 @@ def main():
                                seed=selected, receivers=1089, values_min=float(d[c].min()),
                                values_max=float(d[c].max()), color_min=-bound, color_max=bound,
                                smoothing=False, clipping=False,
-                               uncertainty='None: single selected frozen prediction; aggregate spread in Figure 13'))
+                               uncertainty='None: single selected frozen prediction; aggregate spread in the all-seed field diagnostic CSV files'))
         cax = fig.add_axes([starts[c],.055,width,.012])
         cb = fig.colorbar(mpl.cm.ScalarMappable(norm=norm,cmap=cmap),cax=cax,orientation='horizontal')
         # Symmetric ticks stay within the full, unclipped component range.

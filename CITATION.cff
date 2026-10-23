@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
-title: "TARF-GDC: three-dimensional density-contrast inversion from full-tensor gravity gradients"
+title: "TARF-GDC: A deep learning network for 3D density contrast inversion from full tensor gravity gradients"
 authors:
   - family-names: Xiang
     given-names: Jianbin
@@ -19,5 +19,6 @@ year: 2026
 license: MIT
 repository-code: "https://github.com/xiangjianbin/TARF-GDC"
 # Add a software-archive DOI here only if this source-code release is archived.
-# A Zenodo record containing model weights only is an asset citation, not the software DOI.
+# Assets (data, operator, checkpoints, supporting arrays): https://doi.org/10.5281/zenodo.23235197
+# This asset DOI is not the software DOI and does not replace a future manuscript DOI.
 # Also cite the accompanying Computers & Geosciences manuscript once its DOI is available.

@@ -21,7 +21,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--assets', type=Path, required=True)
-    p.add_argument('--group', choices=['01-02','03','04','05','06-07','08','09','10-11','12','13','14'], required=True)
+    p.add_argument('--group', choices=['01-02','03','04','05','06-07','08','09','10-11','12','13','field-diagnostics'], required=True)
     p.add_argument('--output', type=Path, required=True)
     p.add_argument('--field-source', type=Path,
                    help='Authorized processed field data, e.g. the output of reproduce.py field')
@@ -32,8 +32,8 @@ def main():
               '04': ('architecture',None), '05': ('training','statistics'),
               '06-07': ('pairs','pairs'), '08': ('spatial','statistics'),
               '09': ('sections','statistics'), '10-11': ('field_and_classical','classical'),
-              '12': ('best_field_seed','restricted'), '13': ('field_metrics','restricted'),
-              '14': ('field_and_classical','restricted')}
+              '12': ('best_field_seed','restricted'), '13': ('field_and_classical','restricted'),
+              'field-diagnostics': ('field_metrics','restricted')}
     module, data = groups[args.group]
     if data == 'restricted' and args.field_source is None:
         p.error('Field figures require --field-source; restricted field data are not bundled for publication')
@@ -62,10 +62,10 @@ def main():
         ns['spatial']()
     elif args.group == '10-11':
         ns['matched']()
-    elif args.group == '13':
+    elif args.group == 'field-diagnostics':
         sys.argv = ['field_metrics', '--source-dir', str(out/'source_data'), '--output-dir',str(out)]
         ns['main']()
-    elif args.group == '14':
+    elif args.group == '13':
         ns['vinton']()
     for name, digest in before.items():
         assert hashlib.sha256((source/name).read_bytes()).hexdigest() == digest

@@ -1,5 +1,7 @@
 # Verification and limits
 
+## Historical release audit
+
 Verification was performed in the recorded Python 3.8.10 / PyTorch 2.4.1 CUDA environment. Machine-readable results are retained in `evidence/verification/`. The original research files, dataset and checkpoints were not overwritten.
 
 | Check | Observed result |
@@ -17,10 +19,10 @@ Verification was performed in the recorded Python 3.8.10 / PyTorch 2.4.1 CUDA en
 | Operator rebuild | SimPEG reconstruction produces the exact historical G6 SHA256 |
 | Preparation | All-training normalization exactly matches; operator derivatives and calibration replay pass |
 | Paper tables | 56 non-duplicated mean/SD entries checked; seed SD uses ddof=1 |
-| Figures | All 14 main figure routes rendered; final Figure 13 separately recovered; PDF text audit passed |
+| Figures (historical numbering) | All 14 routes of the earlier manuscript rendered; the former Figure 13 diagnostic was separately recovered; PDF text audit passed |
 | Unit tests | 27 tests passed, including original dataset tests, English-comment checks and a data-independent CPU demo |
 
-Not performed: training all 27 models for their full 50/100-epoch schedules; complete validation/test reruns for every seed; re-solving all 200 classical models; byte-identical regeneration of the multi-stage synthetic dataset; installation in a fresh OS/container; public hosting or GitHub upload. These are not implied by a successful smoke test.
+Not performed: training all 27 models for their full 50/100-epoch schedules; complete validation/test reruns for every seed; re-solving all 200 classical models; byte-identical regeneration of the multi-stage synthetic dataset; installation in a fresh OS/container; public hosting or GitHub upload during that original verification run. These are not implied by a successful smoke test. The GitHub repository and Zenodo asset deposit are now publicly accessible as documented in [DOWNLOAD.md](DOWNLOAD.md).
 
 The code tree was also copied to a standalone ASCII-named temporary directory. Its data-independent CPU demo and paper-table checks passed there using the installed environment; this is a path-portability check, not a fresh dependency installation.
 
@@ -39,3 +41,11 @@ Exact replay of historical weights and exact retraining are different claims. CU
 - Isolated drafts, old drivers, caches and test outputs outside the proposed GitHub tree. A beta selected in a separate exploratory validation exercise was excluded from the manuscript comparison tables.
 
 Legacy optional model branches remain inside the shared architecture implementation for state-layout provenance, but are not supported release experiments. Only the 27 frozen recipes are public training/evaluation contracts; `legacy full`, depth/SAB/Tikhonov variants and field posthoc refinements must not be substituted for TARF-GDC.
+
+## Current manuscript synchronization
+
+The current manuscript has 13 main figures. Group `13` now renders the former Figure 14 Vinton spatial model. The former Figure 13 is retained as `field-diagnostics`, with unnumbered output names. Registered checkpoints, numerical routines, original evidence CSVs, and scientific source arrays are unchanged. This diagnostic is not submitted as supplementary material.
+
+Revision checks are limited to figure-route dispatch, source-file preservation, missing-input/obsolete-group handling, Python syntax, local documentation links, source checksums, and recomputation of aggregate table values from public per-seed CSVs. Full scientific figure replay on the frozen assets was not rerun for this synchronization. Historical pixel-equality and PDF audits are not transferred to the new mapping as new results. No complete retraining, new field inference, or per-noise variance calculation is claimed.
+
+Synchronization check results: all six asset-free figure-route regression tests passed (`python -m unittest discover -s tests -p test_figure_routes.py -v`). Ten changed Python modules compiled, 320 aggregate mean/SD values were checked, and 26 local documentation links resolved. The documented PowerShell reassembly procedure passed a small synthetic ZIP fixture covering all three archive groups and all three checksum stages. The real multi-gigabyte asset archives were not downloaded or reassembled during these checks.

@@ -16,7 +16,7 @@ ROOT=ASSETS/'figure_data/statistics'
 SRC=SOURCE_DATA
 OUT=OUTPUT
 CORE=['0001','1001','0101','1101']
-LABEL={'0001':'Base','1001':'Base-TARF','0101':'Base-Correction','1101':'TARF-GDC','0001C':'Base-cont.','1001C':'TARF-cont.','T0P':'SC','B0P':'MC'}
+LABEL={'0001':'Base','1001':'Base-TARF','0101':'Base-GDC','1101':'TARF-GDC','0001C':'Base-FT','1001C':'Base-TARF-FT','T0P':'SC','B0P':'MC'}
 SHORT={'0001':'B','1001':'T','0101':'R','1101':'F'}
 COLOR={'0001':'#777777','1001':'#4C78A8','0101':'#D09A53','1101':'#5B8E7D','0001C':'#777777','1001C':'#4C78A8','T0P':'#A8A8A8','B0P':'#9B8FAD'}
 mpl.rcParams.update({'font.family':'sans-serif','font.sans-serif':['Arial','Liberation Sans','DejaVu Sans'],'font.size':7,'axes.labelsize':7,'axes.titlesize':7,'xtick.labelsize':6,'ytick.labelsize':6,'legend.fontsize':6.5,'axes.linewidth':.6,'axes.spines.top':False,'axes.spines.right':False,'legend.frameon':False,'svg.fonttype':'none','pdf.fonttype':42,'savefig.facecolor':'white','figure.facecolor':'white'})

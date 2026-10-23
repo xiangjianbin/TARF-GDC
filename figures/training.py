@@ -22,7 +22,7 @@ NAMES = {
     "B0P": "MC",
     "0001": "Base",
     "1001": "Base-TARF",
-    "0101": "Base-Correction",
+    "0101": "Base-GDC",
     "1101": "TARF-GDC",
     "0001C": "Base-FT",
     "1001C": "Base-TARF-FT",

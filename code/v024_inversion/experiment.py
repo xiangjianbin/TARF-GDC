@@ -8,8 +8,8 @@ SPECIAL_CODES = ()
 ALL_CODES = CODES + CONTINUATION_CODES
 ALL = ALL_CODES
 LABELS = {'0001': 'Base', '1001': 'Base-TARF',
-          '0101': 'Base-Correction', '1101': 'Full (TARF+Correction)',
-          '0001C': 'Base-CT', '1001C': 'Base-TARF-CT'}
+          '0101': 'Base-GDC', '1101': 'TARF-GDC',
+          '0001C': 'Base-FT', '1001C': 'Base-TARF-FT'}
 DISPLAY_ORDER = tuple(LABELS)
 REFERENCE_CODES = CODES
 REFINER = dict(width=16, dim=32, heads=4, blocks=1, correction_bound=.25,

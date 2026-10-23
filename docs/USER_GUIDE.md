@@ -4,6 +4,8 @@ All paths below are relative to the repository root. Use a new output directory 
 
 ## 1. Verify supplied assets
 
+First follow [DOWNLOAD.md](DOWNLOAD.md) to obtain the published Zenodo archives, verify checksums, and extract a complete asset root.
+
 ```bash
 python scripts/check_release.py --assets ../TARF-GDC-assets --predictions --output outputs/release_check.json
 TARF_GDC_ASSETS=../TARF-GDC-assets python dataset_generation/audit_dataset_v023.py --dataset ../TARF-GDC-assets/dataset --report-output outputs/data_audit.json
@@ -76,6 +78,16 @@ Required files: `Txx.txt`, `Txy.txt`, `Txz.txt`, `Tyy.txt`, `Tyz.txt`, `Tzz.txt`
 python scripts/render_figures.py --assets ../TARF-GDC-assets --group 06-07 --output outputs/fig06_07
 ```
 
-Available groups: `01-02`, `03`, `04`, `05`, `06-07`, `08`, `09`, `10-11`, `12`, `13`, `14`. The source arrays are copied into each fresh output directory so plot helpers cannot overwrite the immutable bundle. For groups 05 and 06-07 install the system font **Noto Sans CJK JP** used by the original Chinese manuscript. Group 13 is the final two-panel TARF-GDC-only plot. Group 08 additionally emits an older section plot; **use group 09** for final manuscript Figure 9. Replotting does not regenerate network predictions; evaluate/train separately when testing new weights.
+Main-figure groups: `01-02`, `03`, `04`, `05`, `06-07`, `08`, `09`, `10-11`, `12`, `13`. The separate `field-diagnostics` group exports unnumbered all-seed diagnostics. The source arrays are copied into each fresh output directory so plot helpers cannot overwrite the immutable bundle. For groups 05 and 06-07 install the system font **Noto Sans CJK JP** used by the original Chinese manuscript. Group 13 renders the Vinton 3D density contrast model and its sections, formerly Figure 14. The former Figure 13 diagnostic is now `field-diagnostics`. Group 08 additionally emits an older section plot; **use group 09** for final manuscript Figure 9. Replotting does not regenerate network predictions; evaluate/train separately when testing new weights.
 
-For groups 12–14, supply `--field-source outputs/vinton` (the output of `reproduce.py field`) or another explicitly authorized processed field directory. Restricted raw/source field arrays are kept outside the distributable asset bundle. The release's group 14 entry point exports only Figure 14; the obsolete field-comparison panels have been removed from that code path.
+For groups `12`, `13`, and `field-diagnostics`, supply `--field-source outputs/vinton` (the output of `reproduce.py field`) or another authorized processed field directory. These commands reuse frozen predictions and do not train or select new epochs:
+
+```bash
+python scripts/render_figures.py --assets ../TARF-GDC-assets --group 12 --field-source outputs/vinton --output outputs/fig12
+python scripts/render_figures.py --assets ../TARF-GDC-assets --group 13 --field-source outputs/vinton --output outputs/fig13
+python scripts/render_figures.py --assets ../TARF-GDC-assets --group field-diagnostics --field-source outputs/vinton --output outputs/field_diagnostics
+```
+
+The diagnostic exports `seed_metrics.csv`, `component_metrics.csv`, `component_summary.csv`, and `geometry.csv`, plus plots named `FieldDiagnostics_TARF_GDC.*`. They document all three seeds and six components; they are repository diagnostics, not supplementary figures. Figs. 12 and 13 display seed 1107, selected by the largest equally weighted six-component mean R² among three frozen predictions. Overall statistics retain all three seeds. Do not interpret the displayed seed’s fit as the across-seed mean.
+
+Restricted raw/source field arrays remain outside the distributable asset bundle. Group `14` has been retired from the current manuscript mapping.

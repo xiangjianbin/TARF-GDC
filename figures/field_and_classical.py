@@ -34,9 +34,8 @@ def save(fig, n):
     fig.canvas.draw()
     for i,ax in enumerate(fig.axes):
         PANELS.append(dict(figure=n,panel=i+1,title=ax.get_title(),xlim=list(ax.get_xlim()),ylim=list(ax.get_ylim()),
-            interval='TARF-GDC mean ± sample SD and all 3 seeds' if n==13 and i<3 else 'none; fixed spatial array or color scale',
-            source='vinton_component_metrics.csv' if n==13 else
-                   MATCHED_SOURCE.name if n<12 else 'vinton_Full_s1107.npz'))
+            interval='none; fixed spatial array or color scale',
+            source=MATCHED_SOURCE.name if n<12 else 'vinton_Full_s1107.npz'))
     fig.savefig(OUT/f'Figure{n:02d}.svg')
     fig.savefig(OUT/f'Figure{n:02d}.pdf')
     fig.savefig(OUT/f'Figure{n:02d}.png',dpi=600)
@@ -158,7 +157,7 @@ def vinton():
         ax.set_title(('c','d')[j]+'  '+title,loc='left',fontweight='bold')
         ax.axhline(DEPTH[z],ls='--',lw=.7,color='#555')
     colorbar(fig,norm,(.29,.08,.43,.015))
-    save(fig,14)
+    save(fig,13)
 
 
 if __name__=='__main__':

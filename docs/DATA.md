@@ -13,7 +13,7 @@ The asset directory contains:
 ```text
 dataset/                 NPZ shards, records/pairs JSONL, indices, manifest, audit, SHA256SUMS
 operator/g6.npy          frozen float32 forward matrix
-checkpoints/             27 original checkpoints, identities in the code registry
+checkpoints/             27 registered public-release checkpoints, identities in the code registry
 evidence/classical/      converged L2/IRLS densities and the required IRLS initial solution
 evidence/statistics/     retained statistical source arrays
 figure_data/             synthetic figure sources and explicitly labelled legacy color-scale source
@@ -25,7 +25,7 @@ Training noise is deterministically regenerated from sample ID and epoch, with a
 
 Synthetic freeze: 170 hashed files, approximately 6.69 GB decimal. SHA256 of `dataset/SHA256SUMS`: `33004e5d73c610cbc529a8615352407a6b8f1f3771ebd436357770a89b70fbfd`. G6 SHA256: `544d1ceeb63f7da3e83be606e613fb5c3ff6cbe11b7585e1f85c281d71346b0c`. Checkpoint hashes are in `assets/model_registry.json`.
 
-The trained model weights are planned for public release on Zenodo. The record DOI, version, included checkpoint list and license will be added here after the deposit is published. Until a live record is linked, the weights are not represented as publicly downloadable. The frozen synthetic dataset and forward operator are also stored outside this source-code repository; no public download location is currently asserted for them.
+The frozen V023 dataset, `operator/g6.npy`, all 27 registered public-release checkpoints, and supporting evidence are available as [Zenodo assets v1.0.0](https://doi.org/10.5281/zenodo.23235197), published on 8 October 2026 under CC BY 4.0. See [DOWNLOAD.md](DOWNLOAD.md) for all 18 archive parts, checksum verification, reassembly, and extraction. The approximately 4.45 GB download is separate from the source repository and from the extracted dataset size quoted above. The version number refers to the asset deposit, not a source-code tag.
 
 ## Regeneration code and its limits
 
@@ -49,4 +49,6 @@ The 10% deep-targeting policy is not an assertion that exactly 10% of every trac
 
 ## Rights and availability
 
-The source code is covered by the repository's MIT License. The synthetic data, model weights and third-party field data require separately stated licenses or access conditions. The planned Zenodo record for the model weights must identify its included checkpoints, version and license. Field files are excluded from both the GitHub tree and the distributable synthetic asset bundle. Provide lawful source and access instructions if the raw files cannot be redistributed. Pass authorized raw files to `reproduce.py field`, then its output directory to `render_figures.py --field-source`. The self-contained prism demo remains usable without restricted field data. A data restriction alone does not make the full paper independently reproducible until sufficient authorized assets and access instructions are published.
+The repository source code uses the MIT License. The synthetic data, forward operator, trained checkpoints, and supporting assets in Zenodo v1.0.0 use CC BY 4.0; see `LICENSE_DATA.md` in the record. Public checkpoint copies contain portable metadata; the supplied sanitization report records numerical-content equivalence and public hashes.
+
+Raw Vinton observations are third-party data, excluded from the GitHub repository and the Zenodo asset bundle. Access remains subject to the original provider’s terms. Pass authorized raw files to `reproduce.py field`, then supply its output to `scripts/render_figures.py --field-source`. Providing preprocessing code does not itself grant access to these observations. The synthetic assets and the data-independent prism demo do not require the restricted raw field data.

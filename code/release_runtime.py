@@ -7,7 +7,7 @@ from v024_inversion.physics import Normalization, build_operator
 from v024_inversion.model import build_model
 
 ROOT = Path(__file__).resolve().parents[1]
-LABELS = {'0001': 'Base', '1001': 'Base-TARF', '0101': 'Base-Correction',
+LABELS = {'0001': 'Base', '1001': 'Base-TARF', '0101': 'Base-GDC',
           '1101': 'TARF-GDC', '0001C': 'Base-FT', '1001C': 'Base-TARF-FT',
           'T0P': 'SC', 'B0P': 'MC', 'Obs-only': 'Obs-only'}
 

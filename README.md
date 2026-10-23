@@ -6,7 +6,7 @@ Reproducibility candidate for three-dimensional density-contrast inversion from 
 
 This release implements the frozen-initial-network, one-step GDC manuscript version. It is **not** an earlier model called `Full`. The release contains nine configurations, three training seeds, dataset-generation code, training/evaluation, classical inversion, field preprocessing, figure-generation code and verification tests.
 
-**Publication status:** public release accompanying the Computers & Geosciences manuscript "TARF-GDC: three-dimensional density-contrast inversion from full-tensor gravity gradients". Repository: <https://github.com/xiangjianbin/TARF-GDC>. First public release: 2026. The frozen dataset, forward operator, trained weights and supporting source arrays are maintained separately from the code. The trained model weights are planned for public release on Zenodo. The record DOI, version, included checkpoints and license will be added after the deposit is published; until then, this repository does not claim that the weights are publicly downloadable. See [docs/DATA.md](docs/DATA.md) for the current asset status.
+**Publication status:** The source code accompanies the Computers & Geosciences manuscript "TARF-GDC: A deep learning network for 3D density contrast inversion from full tensor gravity gradients". The frozen synthetic dataset, fixed forward operator, 27 trained checkpoints, and supporting assets are publicly available as [Zenodo assets v1.0.0](https://doi.org/10.5281/zenodo.23235197), published on 8 October 2026. Source code uses the MIT License; the Zenodo assets use CC BY 4.0. Raw third-party Vinton observations are excluded. See [asset contents](docs/DATA.md) and [download and verification instructions](docs/DOWNLOAD.md). The asset version does not denote a GitHub source-code tag.
 
 ## Contact
 
@@ -37,7 +37,7 @@ The demo generates an analytical prism example, adds reproducible noise, perform
 
 ## Reproduce the paper with the external assets
 
-Place the separately distributed asset bundle beside this repository:
+Download, reassemble, and verify the [Zenodo asset archives](docs/DOWNLOAD.md), then place the extracted asset directory beside this repository:
 
 ```text
 TARF-GDC/                 code, configs, documentation and small reference tables
@@ -55,8 +55,10 @@ Use CUDA/BF16 for the historical prediction comparison. For a CUDA installation,
 ## Documentation
 
 - [Step-by-step user guide](docs/USER_GUIDE.md): training order, evaluation, calibration, classical and field runs.
+- [Download assets](docs/DOWNLOAD.md): the published DOI, split archives, checksums, and licenses.
+- [Reported metrics](docs/METRICS.md): validation/test coverage, complete held-out metrics, and statistical interpretation.
 - [Data and generation](docs/DATA.md): schema, units, seeds, noise, hashes, asset availability and historical staging.
-- [Manuscript coverage](docs/EXPERIMENT_MAP.md): every experimental section and Figures 1–14.
+- [Manuscript coverage](docs/EXPERIMENT_MAP.md): current experimental sections and Figures 1–13, plus an unnumbered field diagnostic.
 - [Verification scope](docs/VERIFICATION.md): what was executed, what was compared, and what was not rerun.
 
 Run commands from this repository root. Never point output arguments into the frozen asset directory. Keep original checkpoints and datasets unchanged. Historical checkpoints contain Python metadata: deserialize only trusted, hash-verified files. This repository does not download or execute arbitrary checkpoints.
@@ -69,10 +71,12 @@ Run commands from this repository root. Never point output arguments into the fr
 | `B0P` | MC | None |
 | `0001` | Base | None |
 | `1001` | Base-TARF | None |
-| `0101` | Base-Correction | Same-seed Base |
+| `0101` | Base-GDC | Same-seed Base |
 | `1101` | TARF-GDC | Same-seed Base-TARF |
 | `0001C` | Base-FT | Same-seed Base |
 | `1001C` | Base-TARF-FT | Same-seed Base-TARF |
 | `Obs-only` | Observation-only correction control | Same-seed Base-TARF |
+
+Display names are mapped by registered configuration ID: `0101` is Base-GDC and `1101` is TARF-GDC. Historical CSV labels `Base-修正` and `Full` refer to these configurations only when their IDs confirm that provenance. Original evidence files, checkpoint IDs, and hashes are retained.
 
 Each prefix has `_s1107`, `_s1108`, and `_s1109`. The registry records all 27 checkpoint hashes and selected epochs. Reruns are labelled `release` or `smoke`, never retroactively labelled as the original formal experiment.

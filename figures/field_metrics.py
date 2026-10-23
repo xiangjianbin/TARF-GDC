@@ -128,11 +128,11 @@ def main():
     fig.legend(handles=handles, loc="lower center", bbox_to_anchor=(0.52, 0.035),
                ncol=4, handletextpad=0.5, columnspacing=1.6)
     fig.canvas.draw()
-    fig.savefig(out / "Figure13_TARF_GDC.svg")
-    fig.savefig(out / "Figure13_TARF_GDC.pdf")
-    fig.savefig(out / "Figure13_TARF_GDC.png", dpi=600)
-    fig.savefig(out / "Figure13_TARF_GDC.tiff", dpi=600, pil_kwargs={"compression": "tiff_lzw"})
-    fig.savefig(out / "Figure13_preview.png", dpi=300)
+    fig.savefig(out / "FieldDiagnostics_TARF_GDC.svg")
+    fig.savefig(out / "FieldDiagnostics_TARF_GDC.pdf")
+    fig.savefig(out / "FieldDiagnostics_TARF_GDC.png", dpi=600)
+    fig.savefig(out / "FieldDiagnostics_TARF_GDC.tiff", dpi=600, pil_kwargs={"compression": "tiff_lzw"})
+    fig.savefig(out / "FieldDiagnostics_preview.png", dpi=300)
     for index, ax in enumerate(axes):
         bbox = ax.get_tightbbox(fig.canvas.get_renderer()).transformed(fig.dpi_scale_trans.inverted())
         fig.savefig(out / f"panel_{index + 1}_preview.png", dpi=300, bbox_inches=bbox.expanded(1.035, 1.05))
