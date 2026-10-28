@@ -110,9 +110,9 @@ def export(fig,stem):
         if box.x0<-.5 or box.y0<-.5 or box.x1>fig.bbox.width+.5 or box.y1>fig.bbox.height+.5:
             outside.append(label.get_text())
     assert not outside, outside
-    fig.savefig(OUT/(stem+'.svg'))
+    fig.savefig(OUT/(stem+'.svg'),dpi=600)
     fig.savefig(OUT/(stem+'.pdf'),dpi=600)
-    fig.savefig(OUT/(stem+'.png'),dpi=300)
+    fig.savefig(OUT/(stem+'.png'),dpi=600)
     fig.savefig(OUT/(stem+'.tiff'),dpi=600,pil_kwargs={'compression':'tiff_lzw'})
     dump(OUT/(stem+'_render_checks.json'),dict(width_mm=fig.get_figwidth()*25.4,height_mm=fig.get_figheight()*25.4,
         canvas_text_overflow=outside,all_33_points_retained=True,smoothing=False,amplitude_rescaling=False,
@@ -148,7 +148,6 @@ def render(data,metadata):
         'font.size':8,'axes.labelsize':8,'axes.titlesize':9,'xtick.labelsize':8,'ytick.labelsize':8,
         'legend.fontsize':8,'svg.fonttype':'none','pdf.fonttype':42,'axes.spines.top':False,'axes.spines.right':False})
     fig=plt.figure(figsize=(7.204724409448819,8.425196850393702))  # 183 x 214 mm
-    fig.text(.5,.981,'Independent example · horizontal rotation 22.5°',ha='center',fontsize=8)
     fields=[data['density_A'],data['density_B'],data['density_difference']]
     norms=[Normalize(-.7,.7),Normalize(-.7,.7),Normalize(-.4,.4)]
     titles=['Model A','Model B','A − B']
@@ -186,7 +185,6 @@ def render(data,metadata):
         ax2.xaxis.set_major_locator(MaxNLocator(3));ax2.yaxis.set_major_locator(MaxNLocator(3))
         ax2.set_xlabel('x (km)',labelpad=1);ax2.set_ylabel('y (km)',labelpad=1)
         ax2.text(-.15,1.06,chr(100+col),transform=ax2.transAxes,fontsize=10,weight='bold')
-    fig.text(.5,.731,'Section depth: 0.28125 km · d increases downward · coordinates in km',ha='center',fontsize=8)
     for rect,norm,label in (([.15,.450,.42,.010],norms[0],'Density contrast (g cm⁻³)'),
                             ([.735,.450,.20,.010],norms[2],'A − B (g cm⁻³)')):
         cax=fig.add_axes(rect)

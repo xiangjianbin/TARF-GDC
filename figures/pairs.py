@@ -78,7 +78,9 @@ def draw_case(track, archive, errors):
     assert depth_m == (156.25 if track == "separable" else 343.75)
     threshold = float(np.abs(deltas["truth"]).max()) * 0.1
     vmax = max(float(np.abs(x).max()) for x in deltas.values())
-    old_qa = json.loads((SOURCE / "figure_qa.json").read_text())
+    # The QA manifest is UTF-8; specify the codec so replay is independent of
+    # the host's Windows locale (for example, cp936/GBK).
+    old_qa = json.loads((SOURCE / "figure_qa.json").read_text(encoding="utf-8"))
     old = next(x for x in old_qa["figures"] if x["figure"] == f"selected_{track}_zh")
     assert threshold == old["threshold"] and vmax == old["color_vmax"]
     old_slices = np.load(DATA / f"{track}_displayed_slices.npz")
@@ -120,7 +122,7 @@ def draw_case(track, archive, errors):
         position = grid[0, column].get_position(fig)
         fig.text(0.5 * (position.x0 + position.x1), 0.955, NAMES[column],
                  fontsize=6.5, ha="center", va="top",
-                 color="#365E52" if code == "1101" else "#333333")
+                 color="black" if track == "separable" and code == "1101" else ("#365E52" if code == "1101" else "#333333"))
         for row in range(2):
             visible = np.abs(field) >= threshold
             PANELS.append(dict(figure=track, panel=chr(97 + row * 5 + column),
@@ -149,8 +151,6 @@ def draw_case(track, archive, errors):
     cb.set_label("Model-pair density difference (g/cm³)", fontsize=6.5, labelpad=2)
     cb.ax.xaxis.set_label_position("top")
     cb.outline.set_linewidth(0.5)
-    fig.text(0.5, 0.010, f"Coordinates: km; horizontal-slice depth: {depth_m:.2f} m",
-             fontsize=6.5, ha="center", va="bottom")
     save(fig, f"selected_{track}_horizontal_zh", dict(case_key=key, seed=1107, noise=0,
         depth_m=depth_m, threshold=threshold, color_vmax=vmax,
         projection="orthographic", vertical_exaggeration=2, spatial_smoothing=False,

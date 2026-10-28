@@ -46,9 +46,9 @@ def sha256(path):
 
 
 def style():
-    font_manager.findfont("Noto Sans CJK JP", fallback_to_default=False)
+    font_manager.findfont("Arial", fallback_to_default=False)
     mpl.rcParams.update({
-        "font.family": "sans-serif", "font.sans-serif": ["Noto Sans CJK JP", "DejaVu Sans"],
+        "font.family": "sans-serif", "font.sans-serif": ["Arial", "DejaVu Sans"],
         "font.size": 7, "axes.labelsize": 7, "axes.titlesize": 8,
         "xtick.labelsize": 6, "ytick.labelsize": 6, "axes.linewidth": 0.6,
         "axes.spines.top": False, "axes.spines.right": False,

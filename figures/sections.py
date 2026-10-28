@@ -78,7 +78,6 @@ def main():
         if r==3 and s==1:ax.set_xlabel('x (km)',fontsize=6)
     ca=fig.add_axes([.31,.047,.44,.009]);bar=fig.colorbar(mpl.cm.ScalarMappable(norm=norm,cmap=CMAP),cax=ca,orientation='horizontal');bar.set_label('Density contrast (g/cm³)',fontsize=7);bar.ax.tick_params(labelsize=6)
     fig.legend(handles=[Line2D([],[],color='#252525',lw=.8,label='Prediction'),Line2D([],[],color='#707070',lw=.8,ls='--',label='Truth')],loc='lower center',bbox_to_anchor=(.5,.074),ncol=2)
-    fig.text(.5,.009,'Contours: |density contrast| = 0.05 g/cm³; colour images retain all values.',ha='center',fontsize=6)
     save(fig,'Figure09_sections_major_contours_20261002','Identical truth-defined slices show internal signed density and support errors.',['Fixed horizontal slices','Fixed vertical slices'])
     assert all(sha(p)==h for p,h in hashes.items())
     record=dict(status="PASS",source_hashes_unchanged=True,source_sha256=hashes,figures=QA)

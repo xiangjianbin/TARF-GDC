@@ -1,0 +1,35 @@
+{
+  "source_svg": "author-provided PPT/SVG artwork: TARF-GDC.svg",
+  "source_pdf": "author-provided PPT/PDF artwork: TARF-GDC.pdf",
+  "source_png": "投稿修复_2026-10-22/Figures_submission/fig04.png",
+  "crop_box_pdf_pt": [
+    1.7,
+    132.3,
+    638.3,
+    944.3
+  ],
+  "outputs": {
+    "Figure04.pdf": {
+      "sha256": "3ca5bf7bd941376257fcf6567c1f270bac71418d21ca63f8951e9f25391b3503",
+      "bytes": 321968
+    },
+    "Figure04.png": {
+      "sha256": "c4dc69946155584b62d4886167f58dfc91a0a4977728bd4d0d68ab56c36dc91f",
+      "bytes": 1474964
+    },
+    "Figure04.svg": {
+      "sha256": "f5d239cdca9ca8aea18c5406a555da19d23ecc59fbc26fe04c06ef111a0ade85",
+      "bytes": 413408
+    }
+  },
+  "asset_source": "figures/assets",
+  "palette": {
+    "framework": "#F2F2F2",
+    "gdc_main": "#DAE3F3",
+    "tarf": "#EFEDFA",
+    "glin": "#FBF1DC",
+    "gdc_transformer": "#ECFFF0",
+    "blue_nodes": "#4472C4",
+    "orange_skip_connection": "#F4B183"
+  }
+}

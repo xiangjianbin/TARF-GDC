@@ -551,7 +551,7 @@ class InversionNet(nn.Module):
         return self
 
     def apply_heads(self, feature: torch.Tensor) -> dict[str, torch.Tensor]:
-        """Regress signed density in g/cm³; only tanh/dual bound it, glin gates the raw head."""
+        """Regress signed density in g/cm^3; only tanh/dual bound it, glin gates the raw head."""
         density = self.density_head(feature)
         if self.output_mode in {'tanh', 'dual'}:
             density = self.max_density_gcc * torch.tanh(density)

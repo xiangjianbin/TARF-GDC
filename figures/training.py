@@ -35,7 +35,7 @@ COLORS = {
 
 mpl.rcParams.update({
     "font.family": "sans-serif",
-    "font.sans-serif": ["Noto Sans CJK JP", "DejaVu Sans"],
+    "font.sans-serif": ["Arial", "DejaVu Sans"],
     "font.size": 7.5, "axes.labelsize": 7.5, "xtick.labelsize": 6.5,
     "ytick.labelsize": 6.5, "legend.fontsize": 6.3,
     "axes.linewidth": 0.6, "axes.spines.top": False,
@@ -43,7 +43,7 @@ mpl.rcParams.update({
     "svg.fonttype": "none", "pdf.fonttype": 42,
     "figure.facecolor": "white", "savefig.facecolor": "white",
 })
-font_manager.findfont("Noto Sans CJK JP", fallback_to_default=False)
+font_manager.findfont("Arial", fallback_to_default=False)
 
 
 def series(code, stage, metric, add_zero=False):

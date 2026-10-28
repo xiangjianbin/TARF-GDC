@@ -28,10 +28,15 @@ SUBTYPES = ('ellipsoid', 'superellipsoid', 'box', 'cylinder', 'lens', 'frustum',
             'dipping_slab', 'dike', 'wedge', 'faulted_body', 'curved_layer',
             'grf_levelset', 'harmonic_levelset', 'blob_union', 'body_flank',
             'notched_body', 'weak_appendage', 'density_gradient', 'zoned_density')
-TITLES = ('Ellipsoid', 'Superellipsoid', 'Box', 'Cylinder', 'Lens', 'Frustum',
-          'Dipping slab', 'Dike', 'Wedge', 'Faulted body', 'Curved layer',
-          'GRF level set', 'Harmonic level set', 'Blob union', 'Body with flank',
-          'Notched body', 'Weak appendage', 'Density gradient', 'Zoned density')
+# These labels are part of the released Figure 1 artwork.  Keep the display
+# terminology aligned with the manuscript and the final submission PNG; the
+# underlying dataset subtype keys remain unchanged for reproducibility.
+TITLES = ('Ellipsoid', 'Superellipsoid', 'Cuboid', 'Cylinder', 'Lens',
+          'Truncated cone', 'Inclined slab', 'Dike', 'Wedge',
+          'Fault-displaced body', 'Curved layer',
+          'Gaussian random field level set', 'Harmonic level set',
+          'Union of blobs', 'Main body with wings', 'Notched body',
+          'Weak appendage', 'Density gradient body', 'Zoned density body')
 COMPONENTS = ('Txx', 'Txy', 'Txz', 'Tyy', 'Tyz', 'Tzz')
 COLORS = {'ordinary': '#7B858D', 'separable': '#3079A5', 'shape': '#C77A41'}
 CMAP = mpl.colormaps['RdBu_r']
@@ -300,7 +305,7 @@ def save(fig,stem):
     # Native-backend final-size preview. PDF text sizes are audited separately.
     fig.savefig(OUT/f'{stem}.svg',dpi=600)
     fig.savefig(OUT/f'{stem}.pdf',dpi=600)
-    fig.savefig(OUT/f'{stem}.png',dpi=300)
+    fig.savefig(OUT/f'{stem}.png',dpi=600)
     fig.savefig(OUT/f'{stem}.tiff',dpi=600,pil_kwargs={'compression':'tiff_lzw'})
     plt.close(fig)
     print(f'Exported {stem}',flush=True)
