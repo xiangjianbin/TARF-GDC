@@ -1,11 +1,13 @@
-"""Full-Chinese pair-recovery figures from immutable model outputs.
+"""Repository-only diagnostic helpers for historical pair-recovery figures.
 
-Figure 9 compares population-level pair errors across all three training seeds.
-Figures 10/11 preserve each previously selected pair, observation, display seed,
-truth-based slice and voxel threshold while adding two requested baselines.
-Their five rows separate truth, input controls, the baseline and the combined
-network. Each row links exterior 3D structure to an unthresholded interior slice.
-Python-only structural adaptation; no spatial interpolation or smooth surfaces.
+This module retains the Chinese-labelled diagnostic plots used during internal
+figure provenance checks. It is not a manuscript submission route and should
+not be treated as a user-facing example. The current submission renderer calls
+the helpers only for geometry calculations and replaces all displayed labels
+with English in ``figures/pairs.py``.
+
+The scientific arrays, selected cases, thresholds and metrics remain immutable;
+this module performs no inference, reselection, interpolation or smoothing.
 """
 
 from pathlib import Path

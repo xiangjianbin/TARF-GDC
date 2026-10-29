@@ -25,7 +25,7 @@ simplified schematic.
 
 ## What could not be recovered byte-for-byte
 
-The original `Figures_独立图片/fig01.png` input used by the historical title
+The original `Figures_independent_images/fig01.png` input used by the historical title
 band script is no longer present in the working archive. The current source
 plot regenerates Figure 1 with the same final labels and geometry, but it does
 not claim byte-identical pixels to that old raster edit. The same limitation

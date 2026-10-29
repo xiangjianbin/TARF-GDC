@@ -77,6 +77,6 @@ Run commands from this repository root. Never point output arguments into the fr
 | `1001C` | Base-TARF-FT | Same-seed Base-TARF |
 | `Obs-only` | Observation-only correction control | Same-seed Base-TARF |
 
-Display names are mapped by registered configuration ID: `0101` is Base-GDC and `1101` is TARF-GDC. Historical CSV labels `Base-修正` and `Full` refer to these configurations only when their IDs confirm that provenance. Original evidence files, checkpoint IDs, and hashes are retained.
+Display names are mapped by registered configuration ID: `0101` is Base-GDC and `1101` is TARF-GDC. Historical CSV labels `Base-correction` and `Full` refer to these configurations only when their IDs confirm that provenance. Original evidence files, checkpoint IDs, and hashes are retained.
 
 Each prefix has `_s1107`, `_s1108`, and `_s1109`. The registry records all 27 checkpoint hashes and selected epochs. Reruns are labelled `release` or `smoke`, never retroactively labelled as the original formal experiment.
