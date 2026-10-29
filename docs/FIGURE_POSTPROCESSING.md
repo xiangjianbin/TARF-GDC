@@ -14,6 +14,11 @@ metrics were kept unchanged.
 | 26 October 2026 onward | `TARF-GDC.pptx`, `TARF-GDC.svg` and `TARF-GDC.pdf` in the author drawing folder | Replaced the earlier simplified Figure 4 drawing with the author-provided TARF-GDC artwork and its revised palette. | `figures/assets/Figure04.*`, `figures/assets/Figure04_provenance.json`, `figures/architecture.py` |
 | 28 October 2026 | `render_final_*_20261028` and `render_verify_*_20261028b` outputs | Replayed the current release routes and checked final PNG/SVG/PDF exports. | `scripts/render_figures.py`, `tests/test_figure_routes.py`, `tests/test_release.py` |
 
+`figures/pair_helpers.py` is retained as a repository-only helper for
+historical Chinese-labelled diagnostic plots. It is not a standalone
+manuscript-figure route; `figures/pairs.py` overrides its displayed labels with
+English for the current submission.
+
 ## Figure 4 palette
 
 The checked-in Figure 4 provenance records the audited colors: framework
