@@ -10,15 +10,15 @@
   ],
   "outputs": {
     "Figure04.pdf": {
-      "sha256": "3ca5bf7bd941376257fcf6567c1f270bac71418d21ca63f8951e9f25391b3503",
-      "bytes": 321968
+      "sha256": "1edb3fff4544f9c52f8400cc1f7fdb5fc9ebb4ccbf4813ca90310bb351eb89fa",
+      "bytes": 300595
     },
     "Figure04.png": {
-      "sha256": "c4dc69946155584b62d4886167f58dfc91a0a4977728bd4d0d68ab56c36dc91f",
-      "bytes": 1474964
+      "sha256": "62b016a3e5ee2b6b5d4de30849c5a6c915ee958153502bc6cf49acfc936b065c",
+      "bytes": 1456071
     },
     "Figure04.svg": {
-      "sha256": "f5d239cdca9ca8aea18c5406a555da19d23ecc59fbc26fe04c06ef111a0ade85",
+      "sha256": "ff6cf67e4c102cb6f7d2c076a79f38be9acbd5cf4a73de3d59b8cee409a330de",
       "bytes": 413408
     }
   },
@@ -30,6 +30,7 @@
     "glin": "#FBF1DC",
     "gdc_transformer": "#ECFFF0",
     "blue_nodes": "#4472C4",
-    "orange_skip_connection": "#F4B183"
+    "orange_skip_connection": "#F4B183",
+    "tarf_gdc_title": "#506477"
   }
 }
