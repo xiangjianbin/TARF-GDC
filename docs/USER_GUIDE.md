@@ -80,6 +80,8 @@ python scripts/render_figures.py --assets ../TARF-GDC-assets --group 06-07 --out
 
 Main-figure groups: `01-02`, `03`, `04`, `05`, `06-07`, `08`, `09`, `10-11`, `12`, `13`. The separate `field-diagnostics` group exports unnumbered all-seed diagnostics. The source arrays are copied into each fresh output directory so plot helpers cannot overwrite the immutable bundle. For groups 05 and 06-07 install the system font **Noto Sans CJK JP** used by the original Chinese manuscript. Group 13 renders the Vinton 3D density contrast model and its sections, formerly Figure 14. The former Figure 13 diagnostic is now `field-diagnostics`. Group 08 additionally emits an older section plot; **use group 09** for final manuscript Figure 9. Replotting does not regenerate network predictions; evaluate/train separately when testing new weights.
 
+Historical presentation-only edits are documented in [FIGURE_POSTPROCESSING.md](FIGURE_POSTPROCESSING.md). The Figure 1 title-band operation and a submission-directory audit are available through `scripts/postprocess_submission_figures.py`; Figure 4 is copied from the checked-in author-provided SVG/PDF/PNG asset set with its palette recorded in `figures/assets/Figure04_provenance.json`.
+
 For groups `12`, `13`, and `field-diagnostics`, supply `--field-source outputs/vinton` (the output of `reproduce.py field`) or another authorized processed field directory. These commands reuse frozen predictions and do not train or select new epochs:
 
 ```bash
