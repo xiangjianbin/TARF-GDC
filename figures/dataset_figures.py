@@ -31,12 +31,18 @@ SUBTYPES = ('ellipsoid', 'superellipsoid', 'box', 'cylinder', 'lens', 'frustum',
 # These labels are part of the released Figure 1 artwork.  Keep the display
 # terminology aligned with the manuscript and the final submission PNG; the
 # underlying dataset subtype keys remain unchanged for reproducibility.
+# Panel order is fixed by SUBTYPES and is part of the released Figure 1
+# contract.  In particular, panel l (lower-case L; sometimes read as “I”)
+# is the Gaussian random field level set and panel n is the union of blobs.
 TITLES = ('Ellipsoid', 'Superellipsoid', 'Cuboid', 'Cylinder', 'Lens',
           'Truncated cone', 'Inclined slab', 'Dike', 'Wedge',
           'Fault-displaced body', 'Curved layer',
           'Gaussian random field level set', 'Harmonic level set',
           'Union of blobs', 'Main body with wings', 'Notched body',
           'Weak appendage', 'Density gradient body', 'Zoned density body')
+assert len(TITLES) == len(SUBTYPES)
+assert TITLES[11] == 'Gaussian random field level set'
+assert TITLES[13] == 'Union of blobs'
 COMPONENTS = ('Txx', 'Txy', 'Txz', 'Tyy', 'Tyz', 'Tzz')
 COLORS = {'ordinary': '#7B858D', 'separable': '#3079A5', 'shape': '#C77A41'}
 CMAP = mpl.colormaps['RdBu_r']

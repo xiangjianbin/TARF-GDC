@@ -120,9 +120,13 @@ def draw_case(track, archive, errors):
         bx.text(0.0, 1.04, chr(102 + column), transform=bx.transAxes,
                 fontsize=8, fontweight="bold", va="bottom")
         position = grid[0, column].get_position(fig)
+        # Keep TARF-GDC visually neutral in both selected pair figures.  The
+        # figure plate uses the same model order for the separable and
+        # shape-ambiguous cases, so the method label must not change color
+        # with the pair track.
         fig.text(0.5 * (position.x0 + position.x1), 0.955, NAMES[column],
                  fontsize=6.5, ha="center", va="top",
-                 color="black" if track == "separable" and code == "1101" else ("#365E52" if code == "1101" else "#333333"))
+                 color="black" if code == "1101" else "#333333")
         for row in range(2):
             visible = np.abs(field) >= threshold
             PANELS.append(dict(figure=track, panel=chr(97 + row * 5 + column),
